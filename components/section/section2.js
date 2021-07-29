@@ -16,7 +16,7 @@ export default function Section2() {
                 <div className={styles.leftColumn}>
                     <h2>Uraaa! is Cross-Platform</h2>
                     <div className={styles.line}></div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.*/}
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
                         Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                 </div>
             </div>

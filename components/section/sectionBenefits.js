@@ -12,7 +12,7 @@ export default function Benefits() {
                     {/*<Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the author" />*/}
                     <h2>Benefits</h2>
                     <div className={styles.line}></div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.*/}
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
                         Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
 
                 </div>
