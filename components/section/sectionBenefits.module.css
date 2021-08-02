@@ -1,91 +1,28 @@
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.cartHref{
+    text-decoration: none;
+}
+.singleBenefitsImages{
+    border-radius: 16px;
     width: 100%;
-
-
 }
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-
-}
-.doubleColumn {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 2;
-}
-.leftColumn {
-    /*background-color: blue;*/
-    padding-right: 20%;
-    padding-top: 10%;
-    /*height: 100px;*/
-    text-align: center;
-}
-.leftColumn h2{
-    font-style: normal;
-    font-weight: 800;
-    font-size: 64px;
-
-    color: #272744;
-}
-.leftColumn h3{
-    font-style: normal;
-    font-weight: 800;
-    font-size: 64px;
+.singleBenefitsTitle{
+    font-size: 22px;
     line-height: 28px;
-    color: #FF6600;
-}
-.leftColumn h4{
-
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 39px;
     color: #272744;
 }
-.leftColumn p{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 30px;
-    color: #272744;
 
-}
-.leftColumn p span{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: capitalize;
-    color: #FF6600;
-}
-.rightColumn {
-    /*height: 100px;*/
-    /*background-color: green;*/
-    padding-left: 20%;
-}
-.line{
-    width: 45%;
-    height: 2px;
-    background-color: #FF6600;
-}
 .singleBenefits{
     background: #FFFFFF;
     box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.12);
     border-radius: 24px;
     padding: 15px ;
     display: inline-block;
-    position: relative;
-    top: -180px;
+    /*position: relative;*/
+    /*top: -180px;*/
     width: 230px;
     margin-left: 33px;
     margin-top: 33px;
+
 }
 .singleBenefitsImages{
     border-radius: 16px;

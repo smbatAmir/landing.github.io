@@ -1,0 +1,100 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+}
+.doubleColumn {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+.threColumn {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 3;
+}
+.leftColumn {
+    /*background-color: blue;*/
+    padding-right: 20%;
+    padding-top: 10%;
+    /*height: 100px;*/
+    text-align: center;
+}
+.leftColumn h2{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+
+    color: #272744;
+}
+.leftColumn h3{
+    font-style: normal;
+    font-size: 48px;
+    color: #272744;
+}
+.leftColumn h4{
+    font-style: normal;
+    font-size: 32px;
+    color: #FF6600;
+}
+
+.rightColumn {
+    /*height: 100px;*/
+    /*background-color: green;*/
+    padding-left: 20%;
+}
+.singleSell{
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 16px;
+    min-height: 321px;
+}
+.singleSell p{
+    color: #FF7E27;
+    font-size: 22px;
+    display: inline-block;
+    cursor: pointer;
+}
+.lineDiv{
+    width: 30%;
+    height: 2px;
+    background-color: #FF7E27;
+    display: inline-block;
+}
+.iconStyles  {
+    height:48px;
+    color:#FF6600;
+}
+.lineandMore{
+    text-align: end
+}
+.clickMe{
+    font-size: 18px;
+}
+.joinButton{
+    width: 143px;
+    height: 44px;
+    background: #FF6600;
+    border-radius: 32px;
+    text-decoration: navajowhite;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 16px;
+}

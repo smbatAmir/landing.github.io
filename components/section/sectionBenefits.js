@@ -4,24 +4,26 @@ import section2leftbar from "../../public/sectionImages/cross_platform_devices.p
 import SingleBenefits from "./benefits/singleBenefits";
 import singleBenefits1 from "../../public/sectionImages/singlebenefits1.png";
 import singleBenefits2 from "../../public/sectionImages/singlebenefist2.png";
+import {Container, Grid} from "@material-ui/core";
+import section3 from "../../public/sectionImages/section3b.png";
 
 export default function Benefits() {
     var benefistArray = [
         {
             id:1,
-            images :'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVzaW5lc3N3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
+            images :'https://images.unsplash.com/photo-1571844307880-751c6d86f3f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjB3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
             title :'thi is sample text',
             url :'/contact'
         },
         {
             id:2,
-            images :'https://c0.wallpaperflare.com/preview/807/163/816/business-lady-woman-girl.jpg',
+            images :'https://d39l2hkdp2esp1.cloudfront.net/img/photo/126382/126382_00_2x.jpg',
             title :'thi is sample text',
             url :'/contact'
         },
         {
             id:3,
-            images :'https://cdn.pixabay.com/photo/2018/07/25/08/59/business-3560934_640.jpg',
+            images :'https://previews.123rf.com/images/undrey/undrey1605/undrey160500112/56413726-young-woman-working-as-an-office-manager-planning-work-tasks-writing-down-her-schedule-to-planner-at.jpg',
             title :'thi is sample text',
             url :'/contact'
 
@@ -30,11 +32,7 @@ export default function Benefits() {
     const benefitsBG = {
         backgroundImage: 'url("sectionImages/benefistBG.png")',
         backgroundSize: 'cover',
-        width: '77%',
-        margin: '0 auto'
-
-        // backgroundPosition:'center',
-    }
+     }
     const elips = {
         backgroundImage: 'url("sectionImages/Ellipse.png")',
         backgroundSize: '50%',
@@ -43,33 +41,29 @@ export default function Benefits() {
         height: '439px'
     }
     return (
+        <Container>
+            <Grid container style={benefitsBG}>
+                <Grid column item sm={1} spacing={3} >
+                </Grid>
+                <Grid column item sm={5} spacing={3} >
 
-        <div className={styles.row} style={benefitsBG}>
-
-
-            <div className={styles.column}>
-                <div className={styles.rightColumn }>
-                    {/*<Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the author" />*/}
-                    <h2>Benefits</h2>
+                    <h4 className={styles.textTitle}>Benefits</h4>
                     <div className={styles.line}></div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-
-                </div>
-            </div>
-            <div className={styles.column}>
-                <div className={styles.leftColumn} style={elips}>
+                    <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. <span>Read more</span></p>
+                </Grid>
+                <Grid  container  md={6} justifyContent="center" alignItems="center">
                     {benefistArray.map((benefist) => (
                         <SingleBenefits key={benefist.id}
-                        images = {benefist.images}
-                        title = {benefist.title}
-                        url = {benefist.title}
+                                        images = {benefist.images}
+                                        title = {benefist.title}
+                                        url = {benefist.url}
                         />
                     ))}
+                </Grid>
 
-                </div>
-            </div>
-        </div>
-
+            </Grid>
+        </Container>
+      
     )
 }
