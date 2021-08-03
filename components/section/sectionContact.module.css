@@ -1,0 +1,17 @@
+.sectionTitle{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 28px;
+    color: #272744;
+}
+
+
+.line{
+    width: 45%;
+    height: 2px;
+    background-color: #FF6600;
+}
+.contactForm{
+    list-style: none;
+}

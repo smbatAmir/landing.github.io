@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from './../sectionSelling.module.css'
 import Link from "next/link";
 import { useState } from 'react'
+import {Grid} from "@material-ui/core";
 
 
 
@@ -12,12 +13,7 @@ export default function SingleSelling({id,icon, question, answer}) {
     const [asnwerVal, setasnwerVal] = useState({display: 'none'});
     const [clickmeVal, setclickmeVal] = useState();
     const [iconColor, seticonColor] = useState();
-    // const changeChartData = props.changeChartData;
 
-
-
-
-    // console.log(changeChartData)
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -43,17 +39,19 @@ export default function SingleSelling({id,icon, question, answer}) {
 
     };
     return (
-
-        <div className={styles.singleSell} style={count}  onClick={handleClick}>
-            <h2 className={styles.iconStyles} style={iconColor}>{icon}</h2>
-            <h4>{question}</h4>
-            <div className={styles.lineandMore}>
-                <p  style={asnwerVal}>{answer}</p>
-                <div className={styles.lineDiv} style={clickmeVal} ></div>
+        <Grid column item md={4} spacing={3} >
+            <div className={styles.singleSell} style={count}  onClick={handleClick}>
+                <h2 className={styles.iconStyles} style={iconColor}>{icon}</h2>
+                <h4>{question}</h4>
+                <div className={styles.lineandMore}>
+                    <p style={asnwerVal}>{answer}</p>
+                    <div className={styles.lineDiv} style={clickmeVal} ></div>
                     <p className={styles.clickMe} style={clickmeVal}>CLICK ME!</p>
                 </div>
 
-        </div>
+            </div>
+
+        </Grid>
 
     )
 }

@@ -7,6 +7,8 @@ import Section4 from "../components/section/section4";
 import Benefits from "../components/section/sectionBenefits";
 import Selling from "../components/section/sectionSelling";
 import News from "../components/section/sectionNews";
+import Faqs from "../components/section/sectionFAQ";
+import Contact from "../components/section/sectionContact";
 
 export default function Index() {
   return (
@@ -19,6 +21,8 @@ export default function Index() {
           <Benefits />
           <Selling />
           <News />
+          <Faqs/>
+          <Contact />
       </>
   )
 }
