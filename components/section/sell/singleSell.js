@@ -7,7 +7,9 @@ import {Grid} from "@material-ui/core";
 
 
 export default function SingleSelling({id,icon, question, answer}) {
-
+const itemsStyles = {
+    width:'100%'
+}
     const [count, setCount] = useState();
     const [myClick, setmyClick] = useState(true);
     const [asnwerVal, setasnwerVal] = useState({display: 'none'});
@@ -39,7 +41,7 @@ export default function SingleSelling({id,icon, question, answer}) {
 
     };
     return (
-        <Grid column item md={4} spacing={3} >
+        <Grid column item md={4} spacing={3} style={itemsStyles}>
             <div className={styles.singleSell} style={count}  onClick={handleClick}>
                 <h2 className={styles.iconStyles} style={iconColor}>{icon}</h2>
                 <h4>{question}</h4>

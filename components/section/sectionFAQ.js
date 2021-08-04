@@ -37,8 +37,12 @@ export default function Faqs() {
     }
     return (
         <Container>
+            <h2 className={styles.sectionTitle}>FAQ</h2>
+
             <Grid container >
+
                 <Grid column item sm={8} spacing={3} style={faqBG}>
+
                     <div className={styles.faqArea}>
                         {faqArray.map((faq) => (
                             // eslint-disable-next-line react/jsx-no-undef

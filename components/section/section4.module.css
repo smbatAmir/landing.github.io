@@ -1,7 +1,7 @@
 .textTitle{
 
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 32px;
     line-height: 39px;
     color: #272744;
@@ -10,7 +10,7 @@
 
 .textDescription{
     font-style: normal;
-    font-weight: 600;
+    /*font-weight: 600;*/
     font-size: 18px;
     line-height: 30px;
     color: #272744;

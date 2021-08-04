@@ -1,13 +1,13 @@
 .sectionTitle{
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 64px;
     line-height: 28px;
     color: #272744;
 }
 .sectionSubTitle{
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 64px;
     line-height: 28px;
     color: #FF6600;
@@ -15,14 +15,14 @@
 .textTitle{
 
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 32px;
     line-height: 39px;
     color: #272744;
 }
 .textDescription{
     font-style: normal;
-    font-weight: 600;
+    /*font-weight: 600;*/
     font-size: 18px;
     line-height: 30px;
     color: #272744;
@@ -30,7 +30,7 @@
 }
 .textDescription span{
     font-style: normal;
-    font-weight: 600;
+    /*font-weight: 600;*/
     font-size: 16px;
     line-height: 20px;
     text-transform: capitalize;

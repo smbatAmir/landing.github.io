@@ -1,6 +1,6 @@
 .sectionTitle{
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 64px;
     line-height: 28px;
     color: #272744;
@@ -14,4 +14,15 @@
 }
 .contactForm{
     list-style: none;
+}
+.formMenu{
+    color: #7C7C9E;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.line{
+    width: 45%;
+    height: 2px;
+    background-color: #FF6600;
 }

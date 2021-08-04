@@ -2,7 +2,7 @@
 .textTitle{
 
     font-style: normal;
-    font-weight: 800;
+    /*font-weight: 800;*/
     font-size: 48px;
     color: #272744;
 }
@@ -41,6 +41,9 @@
 
 .clickMe{
     font-size: 18px;
+}
+.joinButtonArea{
+    margin-top: 20px;
 }
 .joinButton{
 

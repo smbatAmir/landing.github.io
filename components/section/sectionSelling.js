@@ -73,10 +73,10 @@ export default function Selling() {
                 ))}
 
             </Grid>
-            <Grid container >
+            <Grid container justifyContent="center">
 
                 <Grid column item md={12} spacing={3} align="center">
-                    <div className={styles.column}>
+                    <div className={styles.joinButtonArea}>
                         <Link   href="">
                             <a className={styles.joinButton} > Join Uraaa!</a>
                         </Link>
