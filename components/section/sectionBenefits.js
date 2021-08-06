@@ -40,12 +40,13 @@ export default function Benefits() {
         backgroundRepeat: 'no-repeat',
         height: '439px'
     }
+
     return (
         <Container>
             <Grid container style={benefitsBG}>
-                <Grid column item sm={1} spacing={3} >
-                </Grid>
-                <Grid column item sm={5} spacing={3} >
+                {/*<Grid column item md={1} spacing={3} >*/}
+                {/*</Grid>*/}
+                <Grid column item md={6} spacing={3} >
 
                     <h4 className={styles.textTitle}>Benefits</h4>
                     <div className={styles.line}></div>

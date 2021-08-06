@@ -9,6 +9,7 @@ import Selling from "../components/section/sectionSelling";
 import News from "../components/section/sectionNews";
 import Faqs from "../components/section/sectionFAQ";
 import Contact from "../components/section/sectionContact";
+import Footer from "../components/footer";
 
 export default function Index() {
   return (
@@ -23,6 +24,8 @@ export default function Index() {
           <News />
           <Faqs/>
           <Contact />
+          <Footer />
+
       </>
   )
 }
@@ -30,7 +33,7 @@ export default function Index() {
 Index.getLayout = function getLayout(page) {
   return (
       <Layout>
-        <Sidebar />
+          <Sidebar />
         {page}
       </Layout>
   )

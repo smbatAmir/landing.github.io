@@ -136,7 +136,7 @@ export default function Presentation() {
     const classes = useStyles();
 
     const  textField = {
-        width: '47%'
+        width: '46%'
     }
     const  imputStyle = {
         width: '98%'

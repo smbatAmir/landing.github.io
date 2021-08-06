@@ -1,0 +1,52 @@
+.joinButtonArea{
+    margin-top: 20px;
+}
+.joinButton{
+
+    background: #FF6600;
+    border-radius: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+.joinButtonAreaLogin{
+    margin-top: 20px;
+}
+.joinButtonLogin{
+
+    border: 2px solid #FFFFFF;
+    border-radius: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+.ionfoSecondBar{
+    color: #FFFFFF;
+    font-size: 16px;
+    list-style: none;
+
+
+}
+.ionfoSecondBarSecond{
+    color: #FFFFFF;
+    font-size: 16px;
+    list-style: none;
+
+
+}
+.brimages {
+    width: 24px;
+    margin-top: 2px;
+
+}
+.line{
+    height: 1px;
+    background-color: #fff;
+}
+.footerText{
+    color: #FFFFFF;
+    font-size: 16px;
+
+}
