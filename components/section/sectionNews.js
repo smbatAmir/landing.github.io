@@ -52,43 +52,33 @@ export default function News() {
             url :'/contact',
             data :'21.07.2021'
         }]
-    // {NewsArray.map((news) => (
-    //     <SingleNews key={news.id}
-    //                 images = {news.images}
-    //                 title = {news.title}
-    //                 description = {news.description}
-    //                 url = {news.url}
-    //     />
-    // ))}
     return (
-        <Container>
+        <Container id="news">
             <Grid container >
-                <Grid column item md={4} spacing={3}>
-
+                <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3}>
                 </Grid>
-                <Grid column item md={8} spacing={3} align="right">
-
+                <Grid column item lg={8} md={8} sm={12} xs={12}  spacing={3} align="right">
                     <h4 className={styles.textTitle} >What’s new ? </h4>
                     <div className={styles.line}></div>
-
                 </Grid>
-
             </Grid>
-            <Grid container  md={6} className={styles.newsContainer} spacing={3} style={newsArea}>
+            <Grid container  lg={8} md={8} sm={12} xs={12}  className={styles.newsContainer} spacing={3} style={newsArea}>
                 {NewsArray.map((news) => (
-                    // <Grid  container  md={6}  justifyContent="center" alignItems="center" key={news.id}>
-
-                        <SingleNews key={news.id}
-                            images = {news.images}
-                            title = {news.title}
-                            description = {news.description}
-                            url = {news.url}
-                            data = {news.data}
-                        />
-                    // </Grid>
+                    <SingleNews key={news.id}
+                        images = {news.images}
+                        title = {news.title}
+                        description = {news.description}
+                        url = {news.url}
+                        data = {news.data}
+                    />
                 ))}
-
-
+            </Grid>
+            <Grid container >
+                <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3} style={{textAlign:'center'}}>
+                    <Link href="">
+                        <a className={styles.allNews}>Open All News</a>
+                    </Link>
+                </Grid>
 
             </Grid>
         </Container>

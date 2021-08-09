@@ -11,9 +11,15 @@ import CustomizedMenus from "./mobileSidebar";
 
 
  function Sidebar(props) {
-    if (isWidthUp('sm', props.width)) {
+     const forHeaderSt = {
+         position: 'sticky',
+         top: '0',
+         background: '#fff',
+         zIndex: '85'
+     }
+    if (isWidthUp('md', props.width)) {
         return (
-            <Container>
+            <Container style={forHeaderSt}>
                 <Grid container className={styles.header}>
                     <Grid column item md={1} spacing={3}>
                         <Image className={styles.logo} src={logo} alt="Picture of the author"/>
@@ -21,17 +27,17 @@ import CustomizedMenus from "./mobileSidebar";
                     </Grid>
                     <Grid column item md={8} spacing={3}>
                         <nav className={styles.navBar}>
-
-
-                            {/*<input className={styles.input} placeholder="Search..." />*/}
-                            <Link href="/">
-                                <a>Home</a>
+                            <Link href="/#benefits">
+                                <a>Benefits</a>
                             </Link>
-                            <Link href="/about">
-                                <a>About</a>
+                            <Link href="/#news">
+                                <a>News</a>
                             </Link>
-                            <Link href="/contact">
-                                <a>Contact</a>
+                            <Link href="/#faq">
+                                <a>FAQ</a>
+                            </Link>
+                            <Link href="/#contacts">
+                                <a>Contacts</a>
                             </Link>
                         </nav>
                     </Grid>
@@ -49,29 +55,29 @@ import CustomizedMenus from "./mobileSidebar";
         )
     }else{
         return (
-            <Container>
+            <Container style={forHeaderSt}>
                 <Grid container className={styles.header}>
-                    <Grid column item sm={1} spacing={3}>
+                    <Grid column item lg={1} md={1} sm={6} xs={6} spacing={3}>
                         <Image className={styles.logo} src={logo} alt="Picture of the author"/>
 
                     </Grid>
-                    <Grid column item sm={8} spacing={3}>
-                        <nav className={styles.navBar}>
+                    <Grid column item lg={8} md={8} sm={1} xs={1} spacing={3}>
+                        {/*<nav className={styles.navBar}>*/}
 
 
-                            {/*<input className={styles.input} placeholder="Search..." />*/}
-                            <Link href="/">
-                                <a>Home</a>
-                            </Link>
-                            <Link href="/about">
-                                <a>About</a>
-                            </Link>
-                            <Link href="/contact">
-                                <a>Contact</a>
-                            </Link>
-                        </nav>
+                        {/*    /!*<input className={styles.input} placeholder="Search..." />*!/*/}
+                        {/*    <Link href="/">*/}
+                        {/*        <a>Home</a>*/}
+                        {/*    </Link>*/}
+                        {/*    <Link href="/about">*/}
+                        {/*        <a>About</a>*/}
+                        {/*    </Link>*/}
+                        {/*    <Link href="/contact">*/}
+                        {/*        <a>Contact</a>*/}
+                        {/*    </Link>*/}
+                        {/*</nav>*/}
                     </Grid>
-                    <Grid column item md={3} spacing={3} className={styles.leftMen}>
+                    <Grid column item lg={3} md={3} sm={5} xs={5} spacing={3} className={styles.leftMen}>
                         {/*< GiHamburgerMenu />*/}
                         < CustomizedMenus />
                     </Grid>

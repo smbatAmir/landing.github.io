@@ -9,7 +9,7 @@
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 64px;
-    line-height: 28px;
+    /*line-height: 28px;*/
     color: #FF6600;
 }
 .textTitle{
@@ -17,14 +17,14 @@
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 32px;
-    line-height: 39px;
+    /*line-height: 39px;*/
     color: #272744;
 }
 .textDescription{
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 18px;
-    line-height: 30px;
+    /*line-height: 30px;*/
     color: #272744;
 
 }
@@ -32,7 +32,7 @@
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 16px;
-    line-height: 20px;
+    /*line-height: 20px;*/
     text-transform: capitalize;
     color: #FF6600;
 }
@@ -40,4 +40,79 @@
     width: 45%;
     height: 2px;
     background-color: #FF6600;
+}
+.playArea{
+    position: absolute;
+    z-index: 5;
+    right: 10px;
+    top: 48px;
+    width: 39%;
+    cursor: pointer;
+}
+.playArea h3{
+    color: #272744;
+    font-size: 18px;
+
+}
+.playButton{
+    color: #ffffff;
+    font-size: 16px;
+    background: #272744;
+    border-radius: 32px;
+    padding: 12px 24px;
+    width: fit-content;
+    cursor: pointer;
+}
+.playAreaPar{
+    position: relative;
+}
+
+.secondSee{
+    position: absolute;
+    columns: 2;
+    width: 70%;
+    top: 475px;
+    background-color: #fff;
+    z-index: 55;
+    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
+    border-radius: 32px;
+    padding: 20px;
+}
+.closeModalIcon{
+    position: absolute;
+   right: 20px;
+    top: 4px;
+    color:#F34313;
+    cursor: pointer;
+
+
+
+}
+.rm{
+    cursor: pointer;
+}
+.joinButton{
+
+    background: #FF6600;
+    border-radius: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+.joinButtonArea{
+    text-align: end;
+}
+.sendButton{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.sendButton span{
+    color: #FF6600;
+    font-size: 18px;
+}
+.sendArea{
+    text-align: end;
+    width:100%;
 }

@@ -2,14 +2,14 @@
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 64px;
-    line-height: 28px;
+    /*line-height: 28px;*/
     color: #272744;
 }
 .sectionSubTitle{
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 60px;
-    line-height: 28px;
+    /*line-height: 28px;*/
     color: #FF6600;
 }
 .textTitle{
@@ -17,14 +17,14 @@
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 32px;
-    line-height: 39px;
+    /*line-height: 39px;*/
     color: #272744;
 }
 .textDescription{
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 18px;
-    line-height: 30px;
+    /*line-height: 30px;*/
     color: #272744;
 
 }
@@ -32,7 +32,7 @@
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 16px;
-    line-height: 20px;
+    /*line-height: 20px;*/
     text-transform: capitalize;
     color: #FF6600;
 }
@@ -40,4 +40,9 @@
     width: 45%;
     height: 2px;
     background-color: #FF6600;
+}
+.webExtension{
+    color: #AFAFC0;
+    font-size: 16px;
+
 }

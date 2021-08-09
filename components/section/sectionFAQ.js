@@ -36,7 +36,7 @@ export default function Faqs() {
 
     }
     return (
-        <Container>
+        <Container id="faq">
             <h2 className={styles.sectionTitle}>FAQ</h2>
 
             <Grid container >

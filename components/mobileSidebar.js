@@ -49,7 +49,7 @@ export default function TemporaryDrawer() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {/*{['Home', 'About', 'Contact'].map((text, index) => (*/}
+                {/*{['Home', 'News', 'Contact'].map((text, index) => (*/}
                 {/*    <ListItem button key={text}>*/}
                 {/*        <ListItemIcon>{index % 2 === 0 ? 'g' : 'gf'}</ListItemIcon>*/}
                 {/*        <ListItemText primary={text} />*/}
@@ -59,24 +59,30 @@ export default function TemporaryDrawer() {
                 <nav className={styles.navBarMobile}>
                     <ul>
                         <li>
-                            <Link href="/">
-                                <a>Home</a>
-                            </Link>
+                                <Link href="/#benefits">
+                                    <a>Benefits</a>
+                                </Link>
                         </li>
                         <li>
-                            <Link href="/about">
-                                <a>About</a>
-                            </Link>
+
+                                <Link href="/#news">
+                                    <a>News</a>
+                                </Link>
+
                         </li>
                         <li>
-                            <Link href="/about">
-                                <a>About</a>
-                            </Link>
+
+                                <Link href="/#faq">
+                                    <a>FAQ</a>
+                                </Link>
+
                         </li>
                         <li>
-                            <Link href="/contact">
-                                <a>Contact</a>
-                            </Link>
+
+                                <Link href="/#contacts">
+                                    <a>Contacts</a>
+                                </Link>
+
                         </li>
                     </ul>
                 </nav>
@@ -109,11 +115,11 @@ export default function TemporaryDrawer() {
     );
 
     return (
-        <div>
+        <div className={styles.burgermenuButton}>
             {['right'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <Button onClick={toggleDrawer(anchor, true)}>
-                        < GiHamburgerMenu />
+                    <Button onClick={toggleDrawer(anchor, true)} >
+                        < GiHamburgerMenu className={styles.burgermenuIcon}/>
                     </Button>
                     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                         {list(anchor)}

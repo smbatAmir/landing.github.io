@@ -1,5 +1,6 @@
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
+
 import Section1 from "../components/section/section1";
 import Section2 from "../components/section/section2";
 import Section3 from "../components/section/section3";
@@ -9,22 +10,20 @@ import Selling from "../components/section/sectionSelling";
 import News from "../components/section/sectionNews";
 import Faqs from "../components/section/sectionFAQ";
 import Contact from "../components/section/sectionContact";
-import Footer from "../components/footer";
 
 export default function Index() {
   return (
       <>
 
           <Section1 />
-          <Section2 />
           <Section3 />
           <Section4 />
+          <Section2 />
           <Benefits />
           <Selling />
           <News />
           <Faqs/>
           <Contact />
-          <Footer />
 
       </>
   )
@@ -34,7 +33,7 @@ Index.getLayout = function getLayout(page) {
   return (
       <Layout>
           <Sidebar />
-        {page}
+            {page}
       </Layout>
   )
 }

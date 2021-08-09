@@ -1,11 +1,6 @@
 import styles from './sectionBenefits.module.css'
-import Image from "next/image";
-import section2leftbar from "../../public/sectionImages/cross_platform_devices.png";
 import SingleBenefits from "./benefits/singleBenefits";
-import singleBenefits1 from "../../public/sectionImages/singlebenefits1.png";
-import singleBenefits2 from "../../public/sectionImages/singlebenefist2.png";
 import {Container, Grid} from "@material-ui/core";
-import section3 from "../../public/sectionImages/section3b.png";
 
 export default function Benefits() {
     var benefistArray = [
@@ -28,7 +23,6 @@ export default function Benefits() {
             url :'/contact'
 
     }]
-    console.log(benefistArray[0].title)
     const benefitsBG = {
         backgroundImage: 'url("sectionImages/benefistBG.png")',
         backgroundSize: 'cover',
@@ -38,29 +32,28 @@ export default function Benefits() {
         backgroundSize: '50%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '439px'
+        // height: '439px'
     }
 
     return (
-        <Container>
+        <Container id='benefits' style={{paddingTop:'105px'}}>
             <Grid container style={benefitsBG}>
-                {/*<Grid column item md={1} spacing={3} >*/}
-                {/*</Grid>*/}
                 <Grid column item md={6} spacing={3} >
-
                     <h4 className={styles.textTitle}>Benefits</h4>
                     <div className={styles.line}></div>
                     <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                         Contrary to popular belief, Lorem Ipsum is not simply random text. <span>Read more</span></p>
                 </Grid>
-                <Grid  container  md={6} justifyContent="center" alignItems="center">
-                    {benefistArray.map((benefist) => (
-                        <SingleBenefits key={benefist.id}
-                                        images = {benefist.images}
-                                        title = {benefist.title}
-                                        url = {benefist.url}
-                        />
-                    ))}
+                <Grid  container  md={6} justifyContent="center" alignItems="center" style={elips} tyle={{marginTop:'-100px'}}>
+                    <Grid container  md={12} justifyContent="center" alignItems="center">
+                        {benefistArray.map((benefist) => (
+                            <SingleBenefits key={benefist.id}
+                                            images = {benefist.images}
+                                            title = {benefist.title}
+                                            url = {benefist.url}
+                            />
+                        ))}
+                    </Grid>
                 </Grid>
 
             </Grid>

@@ -13,14 +13,17 @@
 }
 
 .singleSell{
+    cursor: pointer;
     margin: 0 auto;
-    padding: 10px;
     background-color: #fff;
     border-radius: 16px;
     min-height: 321px;
+    padding: 5px 52px 25px 52px;
+    height: 367px;
+    position: relative;
 }
 .singleSell p{
-    color: #FF7E27;
+    /*color: #FF7E27;*/
     font-size: 22px;
     display: inline-block;
     cursor: pointer;
@@ -32,15 +35,18 @@
     display: inline-block;
 }
 .iconStyles  {
-    height:48px;
+    height:64px;
     color:#FF6600;
+
 }
 .lineandMore{
     text-align: end;
 }
 
 .clickMe{
+
     font-size: 18px;
+    color: #FF7E27;
 }
 .joinButtonArea{
     margin-top: 20px;
@@ -53,4 +59,16 @@
     color: #fff;
 
     padding: 10px 20px;
+}
+.answeVal{
+    /*position: absolute;*/
+    bottom: 70px;
+    left: 10%;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.clMe{
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
 }

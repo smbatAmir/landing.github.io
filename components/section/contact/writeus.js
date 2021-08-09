@@ -12,6 +12,8 @@ import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import { green } from '@material-ui/core/colors';
 import {TextareaAutosize} from "@material-ui/core";
+import styles from "../section1.module.css";
+import {AiOutlineSend} from "@react-icons/all-files/ai/AiOutlineSend";
 
 const CssTextField = withStyles({
     root: {
@@ -173,6 +175,9 @@ export default function CustomizedInputs() {
                 />
             </ThemeProvider>
             {/*</FormControl>*/}
+            <div className={styles.sendArea}>
+                <button className={styles.sendButton}> <span>Send <AiOutlineSend /></span></button>
+            </div>
         </form>
     );
 }

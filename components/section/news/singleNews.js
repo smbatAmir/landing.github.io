@@ -9,7 +9,7 @@ export default function SingleNews({images, title, url, description, data}) {
 
     return (
 
-        <Grid column item md={6} >
+        <Grid column item lg={6} md={6} sm={12} xs={12}  >
             <div className={styles.singleBenefits}>
                 <Link href={url} >
                     <a className={styles.cartHref}>

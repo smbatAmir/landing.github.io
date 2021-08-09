@@ -1,11 +1,15 @@
 .header{
     padding-top: 30px;
+    padding-bottom: 10px;
+    position: sticky;
+    left: 0;
+    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
 }
 .navBar a {
     color: #272744;
     text-decoration: none;
     font-size: 16px;
-    padding: 20px 15px;
+    padding: 20px 38px;
 }
 
 .leftMen a{
@@ -13,6 +17,7 @@
     text-decoration: none;
     font-size: 16px;
     padding: 12px 24px;
+    text-align: end!important;
 }
 .join{
     background: #FF6600;
@@ -35,4 +40,12 @@
 }
 .joinMobile span{
     color: #FF6600;
+}
+.burgermenuIcon{
+    width: 38px;
+    height: 38px;
+    /*left: calc(50% - 38px/2 + 144.5px);*/
+}
+.burgermenuButton{
+    text-align: end;
 }

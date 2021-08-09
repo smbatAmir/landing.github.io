@@ -10,9 +10,9 @@ import {useState} from "react";
 import {Container, Grid} from "@material-ui/core";
 import Image from "next/image";
 import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
+import Section4 from "./section4";
 
 export default function Selling() {
-
 
     var answerArray = [
         {
@@ -46,12 +46,12 @@ export default function Selling() {
 
 
     return (
-        <Container>
+        <Container  id='test'>
             <Grid container >
-                <Grid column item md={4} spacing={3}>
+                <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3}>
 
                 </Grid>
-                <Grid column item md={8} spacing={3} align="right">
+                <Grid column item lg={8} md={8} sm={12} xs={12}  spacing={3} align="right">
 
                     <h4 className={styles.textTitle} >Start Selling</h4>
                     <p className={styles.sellingDesc}>With No Effort,</p>
@@ -75,7 +75,7 @@ export default function Selling() {
             </Grid>
             <Grid container justifyContent="center">
 
-                <Grid column item md={12} spacing={3} align="center">
+                <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3} align="center">
                     <div className={styles.joinButtonArea}>
                         <Link   href="">
                             <a className={styles.joinButton} > Join Uraaa!</a>

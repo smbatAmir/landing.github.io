@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar'
 export default function Contact() {
     return (
         <section>
-            <h2>Layout Example (Contact)</h2>
+            <h2>Layout Example (NEWS)</h2>
 
             <p>
                 When navigating between pages, we want to persist page state (input
@@ -28,6 +28,7 @@ Contact.getLayout = function getLayout(page) {
         <Layout>
             <Sidebar />
             {page}
+
         </Layout>
     )
 }

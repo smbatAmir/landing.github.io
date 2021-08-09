@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
+import Footer from "./footer";
 
 export default function Layout({ children }) {
     return (
@@ -8,6 +9,8 @@ export default function Layout({ children }) {
                 <title>Layouts Example</title>
             </Head>
             <main className={styles.main}>{children}</main>
+            <Footer />
+
         </>
     )
 }

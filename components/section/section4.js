@@ -8,14 +8,15 @@ export default function Section4() {
     return (
         <Container>
             <Grid container >
-                <Grid column item sm={6} spacing={3}>
-                    <Image className={styles.sectinoImages} src={section4leftbar} alt="Picture of the author" />
-                </Grid>
-                <Grid column item md={6} spacing={3}>
+                <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                     <h4 className={styles.textTitle}>Barcode Scan</h4>
                     <div className={styles.line}></div>
                     <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
                         Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                </Grid>
+                <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
+                    <Image className={styles.sectinoImages} src={section4leftbar} alt="Picture of the author" />
+
                 </Grid>
             </Grid>
         </Container>

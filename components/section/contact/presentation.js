@@ -14,6 +14,7 @@ import { green } from '@material-ui/core/colors';
 import {Grid, TextareaAutosize} from "@material-ui/core";
 import {AiOutlineExclamationCircle} from "@react-icons/all-files/ai/AiOutlineExclamationCircle";
 import styles from "../section1.module.css";
+import {AiOutlineSend} from "@react-icons/all-files/ai/AiOutlineSend";
 
 const CssTextField = withStyles({
     root: {
@@ -189,6 +190,9 @@ export default function Presentation() {
                 />
             </ThemeProvider>
             {/*</FormControl>*/}
+            <div className={styles.sendArea}>
+                <button className={styles.sendButton}> <span>Send <AiOutlineSend /></span></button>
+            </div>
         </form>
     );
 }

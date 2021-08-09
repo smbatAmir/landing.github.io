@@ -14,6 +14,7 @@ import { green } from '@material-ui/core/colors';
 import {Grid, TextareaAutosize} from "@material-ui/core";
 import {AiOutlineExclamationCircle} from "@react-icons/all-files/ai/AiOutlineExclamationCircle";
 import styles from "../section1.module.css";
+import {AiOutlineSend} from "@react-icons/all-files/ai/AiOutlineSend";
 
 const CssTextField = withStyles({
     root: {
@@ -141,9 +142,20 @@ export default function CallBack() {
     const  imputStyle = {
         width: '98%'
     }
+    const registerUser = event => {
+        event.preventDefault() // don't redirect the page
+        // where we'll add our form logic
+        // https://nextjs.org/blog/forms
+        let phone = event.target.phone.value
+        let birthday = event.target.birthday.value
+        let clock = event.target.clock.value
+        console.log(phone)
+        console.log(birthday)
+        console.log(clock)
 
+    }
     return (
-        <form className={classes.root} noValidate>
+        <form className={classes.root} noValidate onSubmit={registerUser}>
             {/*<FormControl fullWidth className={classes.margin}>*/}
             <h3>Fill the form below and we will call you back <AiOutlineExclamationCircle /> </h3>
             <div className={styles.line}></div>
@@ -156,6 +168,7 @@ export default function CallBack() {
                            label="Your phone number"
                            variant="outlined"
                            id="phone"
+                           name='phone'
                     // fullWidth = 'true'
                 />
 
@@ -164,6 +177,7 @@ export default function CallBack() {
                     id="date"
                     variant="outlined"
                     label="Birthday"
+                    name='birthday'
                     type="date"
                     defaultValue="2017-05-24"
                     style={textField}
@@ -176,6 +190,7 @@ export default function CallBack() {
                     id="time"
                     label="Alarm clock"
                     type="time"
+                    name='clock'
                     variant="outlined"
                     defaultValue="07:30"
                     style={textField}
@@ -189,6 +204,9 @@ export default function CallBack() {
                 />
             </ThemeProvider>
             {/*</FormControl>*/}
+            <div className={styles.sendArea}>
+                <button className={styles.sendButton}> <span>Send <AiOutlineSend /></span></button>
+            </div>
         </form>
     );
 }
