@@ -80,6 +80,7 @@ export default function Section2() {
                                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                                     <div className={styles.brIcon}>
                                         <Image  src={ChromeWtext} alt="Picture of the Safari Icon" />
+
                                     </div>
                                 </Grid>
                             </Grid>
