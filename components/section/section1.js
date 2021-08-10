@@ -6,8 +6,9 @@ import {FiPlay} from "@react-icons/all-files/fi/FiPlay";
 import VideoMoadal from "./modalVideo";
 import TransitionsModal from "./modalVideo";
 import {IoClose} from "@react-icons/all-files/io5/IoClose";
-import {useState} from "react";
+import React, {useState} from "react";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 export default function Section1() {
     const img ={
         position: 'relative'
@@ -32,7 +33,9 @@ export default function Section1() {
         <Container>
         <Grid container >
             <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3}>
-                    <h2 className={styles.sectionTitle}>Start Selling</h2>
+                <Fade left>
+
+                <h2 className={styles.sectionTitle}>Start Selling</h2>
                     <h3 className={styles.sectionSubTitle}>With Uraaa!</h3>
                     <div className={styles.line}></div>
                     <div >
@@ -57,8 +60,11 @@ export default function Section1() {
                         </Link>
                     </div>
                 </div>
+                </Fade>
             </Grid>
             <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3} className={styles.playAreaPar}>
+                <Fade right>
+
                 <div className={styles.playArea}>
                     <h3>Increase your income using our product!</h3>
                     < TransitionsModal
@@ -66,7 +72,7 @@ export default function Section1() {
                     />
                 </div>
                 <Image  src={section1RightBar} alt="Picture of the author" style={img} />
-
+                </Fade>
             </Grid>
         </Grid>
         </Container>

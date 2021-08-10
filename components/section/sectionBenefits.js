@@ -1,6 +1,9 @@
 import styles from './sectionBenefits.module.css'
 import SingleBenefits from "./benefits/singleBenefits";
 import {Container, Grid} from "@material-ui/core";
+import Flip from 'react-reveal/Flip';
+import Fade from "react-reveal/Fade";
+import React from "react";
 
 export default function Benefits() {
     var benefistArray = [
@@ -37,14 +40,21 @@ export default function Benefits() {
 
     return (
         <Container id='benefits' style={{paddingTop:'105px'}}>
-            <Grid container style={benefitsBG}>
+            <Flip top >
+
+                <Grid container style={benefitsBG}>
                 <Grid column item md={6} spacing={3} >
+                    <Fade left delay={1000}>
+
                     <h4 className={styles.textTitle}>Benefits</h4>
                     <div className={styles.line}></div>
                     <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                         Contrary to popular belief, Lorem Ipsum is not simply random text. <span>Read more</span></p>
+                    </Fade>
                 </Grid>
                 <Grid  container  md={6} justifyContent="center" alignItems="center" style={elips} tyle={{marginTop:'-100px'}}>
+                    <Fade right delay={1000}>
+
                     <Grid container  md={12} justifyContent="center" alignItems="center">
                         {benefistArray.map((benefist) => (
                             <SingleBenefits key={benefist.id}
@@ -54,9 +64,11 @@ export default function Benefits() {
                             />
                         ))}
                     </Grid>
+                    </Fade>
                 </Grid>
 
             </Grid>
+            </Flip>
         </Container>
       
     )

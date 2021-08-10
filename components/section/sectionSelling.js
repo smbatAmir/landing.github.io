@@ -11,6 +11,7 @@ import {Container, Grid} from "@material-ui/core";
 import Image from "next/image";
 import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
 import Section4 from "./section4";
+import Roll from 'react-reveal/Roll';
 
 export default function Selling() {
 
@@ -68,6 +69,7 @@ export default function Selling() {
                             icon = {answer.icon}
                             question = {answer.question}
                             answer = {answer.answer}
+                            delay = {answer.id*500}
 
                         />
                 ))}
@@ -77,9 +79,11 @@ export default function Selling() {
 
                 <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3} align="center">
                     <div className={styles.joinButtonArea}>
-                        <Link   href="">
-                            <a className={styles.joinButton} > Join Uraaa!</a>
-                        </Link>
+                        <Roll top delay={1850}>
+                            <Link   href="">
+                                <a className={styles.joinButton} > Join Uraaa!</a>
+                            </Link>
+                        </Roll>
                     </div>
                 </Grid>
             </Grid>

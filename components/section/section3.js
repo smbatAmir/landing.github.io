@@ -4,6 +4,8 @@ import section3RightBar from "../../public/sectionImages/web_extension_lapto.png
 import {Container, Grid} from "@material-ui/core";
 import section3 from "../../public/sectionImages/section3b.png";
 import TransitionsModal from "./modalVideo";
+import Fade from "react-reveal/Fade";
+import React from "react";
 
 export default function Section3() {
     return (
@@ -11,10 +13,14 @@ export default function Section3() {
         <Container>
             <Grid container >
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
-                    <Image  src={section3} alt="Picture of the author" />
+                    <Fade left>
 
+                    <Image  src={section3} alt="Picture of the author" />
+                    </Fade>
                 </Grid>
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
+                    <Fade right>
+
                     <h2 className={styles.sectionTitle}>Grab Buyers</h2>
                     <h3 className={styles.sectionSubTitle}>Lorem Ipsum</h3>
                     <div className={styles.line}></div>
@@ -25,6 +31,7 @@ export default function Section3() {
                         videoURL={'https://www.youtube.com/watch?v=xT65UQM0e-Y'}
                     />
                     <p className={styles.webExtension}>Web extension:</p>
+                    </Fade>
                 </Grid>
 
             </Grid>

@@ -10,6 +10,7 @@ import {ImFacebook} from "@react-icons/all-files/im/ImFacebook";
 import {IoLogoInstagram} from "@react-icons/all-files/io/IoLogoInstagram";
 import {FiInstagram} from "@react-icons/all-files/fi/FiInstagram";
 import {FaFacebookF} from "@react-icons/all-files/fa/FaFacebookF";
+import Fade from 'react-reveal/Fade';
 
 export default function Contact() {
     const contactBG = {
@@ -25,23 +26,29 @@ export default function Contact() {
         <Container id="contacts">
             <Grid container >
                 <Grid column item sm={6} spacing={3} >
-                    <h2 className={styles.sectionTitle}>Contacts</h2>
+                    <Fade right>
 
-                    <div className={styles.line}></div>
-    
-                    <ul className={styles.contactForm}>
-                        <li> <FiPhone />+374 55 555 555</li>
-                        <li> <AiOutlineMail /> some@mail.com</li>
-                        <li> <GoLocation/> Countery, City, Street 55</li>
-                    </ul>
-                    <h4>Find us on social media</h4>
-                    <ul className={styles.socIcon}>
-                        <li><a href=""><FaFacebookF className={styles.socIconSh} /><span>facebook</span></a> </li>
-                        <li><a href=""> <FiInstagram className={styles.socIconSh} /><span>Instagram</span></a></li>
-                    </ul>
+                        <h2 className={styles.sectionTitle}>Contacts</h2>
+
+                        <div className={styles.line}></div>
+
+                        <ul className={styles.contactForm}>
+                            <li> <FiPhone />+374 55 555 555</li>
+                            <li> <AiOutlineMail /> some@mail.com</li>
+                            <li> <GoLocation/> Countery, City, Street 55</li>
+                        </ul>
+                        <h4>Find us on social media</h4>
+                        <ul className={styles.socIcon}>
+                            <li><a href=""><FaFacebookF className={styles.socIconSh} /><span>facebook</span></a> </li>
+                            <li><a href=""> <FiInstagram className={styles.socIconSh} /><span>Instagram</span></a></li>
+                        </ul>
+                    </Fade>
                 </Grid>
                 <Grid column item md={6} spacing={3} style={contactBG}>
+                    <Fade left>
+
                     <InputArea />
+                    </Fade>
                 </Grid>
 
             </Grid>

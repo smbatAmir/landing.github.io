@@ -3,10 +3,11 @@ import styles from './../sectionSelling.module.css'
 import Link from "next/link";
 import { useState } from 'react'
 import {Grid} from "@material-ui/core";
+import Flip from 'react-reveal/Flip';
 
 
 
-export default function SingleSelling({id,icon, question, answer}) {
+export default function SingleSelling({id,icon, question, answer, delay}) {
     const itemsStyles = {
         width: '100%'
     }
@@ -49,6 +50,8 @@ export default function SingleSelling({id,icon, question, answer}) {
 
         return (
             <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3} style={itemsStyles}>
+                <Flip delay={delay} left>
+
                 <div className={styles.singleSell} style={count} onClick={handleClick}>
                     <h2 className={styles.iconStyles} style={iconColor}>{icon}</h2>
                     <h4 style={questionVal} >{question}</h4>
@@ -61,7 +64,7 @@ export default function SingleSelling({id,icon, question, answer}) {
                     </div>
                     {/*<input name={id + '_iniput'} id={id + '_iniput'} value={[id, clickId]} type="text"/>*/}
                 </div>
-
+                </Flip>
             </Grid>
 
         )

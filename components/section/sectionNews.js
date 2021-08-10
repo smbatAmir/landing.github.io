@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import {Grid, Paper} from "@material-ui/core";
 import Image from "next/image";
 import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
+import Flip from 'react-reveal/Flip';
 
 
 export default function News() {
@@ -62,6 +63,8 @@ export default function News() {
                     <div className={styles.line}></div>
                 </Grid>
             </Grid>
+            <Flip top>
+
             <Grid container  lg={8} md={8} sm={12} xs={12}  className={styles.newsContainer} spacing={3} style={newsArea}>
                 {NewsArray.map((news) => (
                     <SingleNews key={news.id}
@@ -70,9 +73,11 @@ export default function News() {
                         description = {news.description}
                         url = {news.url}
                         data = {news.data}
+                        delay = {news.id *100}
                     />
                 ))}
             </Grid>
+            </Flip>
             <Grid container >
                 <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3} style={{textAlign:'center'}}>
                     <Link href="">
