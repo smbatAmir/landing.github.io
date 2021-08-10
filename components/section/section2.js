@@ -6,7 +6,7 @@ import appStore from "../../public/sectionImages/appStore.png";
 import googleStore from "../../public/sectionImages/googleStore.png";
 import webSites from "../../public/sectionImages/website.png";
 import ChromeWtext from "../../public/sectionImages/ChromWtext.png";
-import SafariWtext from "../../public/sectionImages/safariWtext.png";
+// import SafariWtext from "../../public/sectionImages/safariWtext.png";
 
 import {Container, Grid} from "@material-ui/core";
 import React from 'react';
@@ -79,7 +79,7 @@ export default function Section2() {
                                 </Grid>
                                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                                     <div className={styles.brIcon}>
-                                        <Image  src={SafariWtext} alt="Picture of the Safari Icon" />
+                                        <Image  src={ChromeWtext} alt="Picture of the Safari Icon" />
                                     </div>
                                 </Grid>
                             </Grid>

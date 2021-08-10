@@ -46,11 +46,10 @@ export default function Contact() {
                 </Grid>
                 <Grid column item md={6} spacing={3} style={contactBG}>
                     <Fade left>
-
+{/*tyu*/}
                     <InputArea />
                     </Fade>
                 </Grid>
-
             </Grid>
         </Container>
     )
