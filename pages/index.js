@@ -19,11 +19,11 @@ export default function Index() {
           <Section3 />
           <Section4 />
           <Section2 />
-          <Benefits />
+          {/*<Benefits />*/}
           <Selling />
-          <News />
-          <Faqs/>
-          <Contact />
+          {/*<News />*/}
+          {/*<Faqs/>*/}
+          {/*<Contact />*/}
 
       </>
   )

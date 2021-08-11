@@ -49,3 +49,20 @@
 .burgermenuButton{
     text-align: end;
 }
+/*.activeLink{*/
+/*    background-color: #0070f3;*/
+/*}*/
+.activeLink{
+color: #FF6600;
+    padding-right: 5px ;
+}
+.activeLink >svg{
+    font-size: 10px;
+}
+.inactiveLink{
+    color: #FFF;
+    padding-right: 5px ;
+}
+.inactiveLink >svg{
+    font-size: 10px;
+}

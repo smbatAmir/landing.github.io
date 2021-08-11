@@ -10,7 +10,7 @@ export default function SingleNews({images, title, url, description, data, delay
 
     return (
 
-        <Grid column item lg={6} md={6} sm={12} xs={12}  >
+        <Grid column item lg={3} md={3} sm={12} xs={12}  >
             <Zoom top delay={delay}>
                 <div className={styles.singleBenefits}>
                     <Link href={url} >

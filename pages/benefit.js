@@ -8,20 +8,20 @@ import Fade from 'react-reveal/Fade';
 import Layout from "../components/layout";
 import Sidebar from "../components/sidebar";
 import Contact from "../components/section/sectionContact";
+import BenefitsAll from '../components/section/sectionBenefits'
 
 
-
-export default function Contacts() {
+export default function Benefits() {
 
     return (
 
         <Container>
-            <Contact />
+            <BenefitsAll />
         </Container>
     )
 }
 
-Contacts.getLayout = function getLayout(page) {
+Benefits.getLayout = function getLayout(page) {
     return (
         <Layout>
             <Sidebar />

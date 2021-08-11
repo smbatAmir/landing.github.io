@@ -5,7 +5,7 @@ import Flip from 'react-reveal/Flip';
 import Fade from "react-reveal/Fade";
 import React from "react";
 
-export default function Benefits() {
+export default function BenefitsAll() {
     var benefistArray = [
         {
             id:1,

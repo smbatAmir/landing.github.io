@@ -65,7 +65,7 @@ export default function TemporaryDrawer() {
                         </li>
                         <li>
 
-                                <Link href="/#news">
+                                <Link href="/news">
                                     <a>News</a>
                                 </Link>
 
