@@ -6,10 +6,15 @@ import {FiPlay} from "@react-icons/all-files/fi/FiPlay";
 import VideoMoadal from "./modalVideo";
 import TransitionsModal from "./modalVideo";
 import {IoClose} from "@react-icons/all-files/io5/IoClose";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
-import Fade from "react-reveal/Fade";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 export default function Section1() {
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, [])
     const img ={
         position: 'relative'
     }
@@ -33,37 +38,38 @@ export default function Section1() {
         <Container>
         <Grid container >
             <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3}>
-                <Fade left>
 
-                <h2 className={styles.sectionTitle}>Start Selling</h2>
+                <div data-aos="fade-left">
+                    <h2 className={styles.sectionTitle}>Start Selling</h2>
                     <h3 className={styles.sectionSubTitle}>With Uraaa!</h3>
                     <div className={styles.line}></div>
                     <div >
                         <h4 className={styles.textTitle}>What is Uraaa ?</h4>
                         <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Contrary to popular belief to popular belief, Lorem Ipsum is not simply random text. <span className={styles.rm} onClick={openModal}>Read more</span></p>
+                            Contrary to popular belief to popular belief, Lorem Ipsum is not simply random text. <span className={styles.rm} onClick={openModal}>Read more</span></p>
                         <div>
                             <Link   href="">
                                 <a className={styles.joinButton} > Join Uraaa!</a>
                             </Link>
                         </div>
                     </div>
-                <div style={clickOpen} className={styles.secondSee}>
-                    < IoClose className={styles.closeModalIcon} onClick={closeModal}/>
-                    <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-                    <div className={styles.joinButtonArea}>
-                        <Link   href="">
-                            <a className={styles.joinButton} > Join Uraaa!</a>
-                        </Link>
+                    <div style={clickOpen} className={styles.secondSee}>
+                        < IoClose className={styles.closeModalIcon} onClick={closeModal}/>
+                        <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                        <div className={styles.joinButtonArea}>
+                            <Link   href="">
+                                <a className={styles.joinButton} > Join Uraaa!</a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-                </Fade>
+
             </Grid>
             <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3} className={styles.playAreaPar}>
-                <Fade right>
+                <div data-aos="fade-right">
 
                 <div className={styles.playArea}>
                     <h3>Increase your income using our product!</h3>
@@ -72,7 +78,7 @@ export default function Section1() {
                     />
                 </div>
                 <Image  src={section1RightBar} alt="Picture of the author" style={img} />
-                </Fade>
+                </div>
             </Grid>
         </Grid>
         </Container>

@@ -3,10 +3,16 @@
     box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06)!important;
     border-radius: 16px!important;
 }
-.sectionTitle{
+
+.textTitle{
     font-style: normal;
     /*font-weight: 800;*/
-    font-size: 64px;
-    line-height: 28px;
+    font-size: 32px;
+    line-height: 39px;
     color: #272744;
+}
+.line{
+    width: 45%;
+    height: 2px;
+    background-color: #FF6600;
 }

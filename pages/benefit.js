@@ -16,6 +16,12 @@ export default function Benefits() {
     return (
 
         <Container>
+            <Grid container >
+                <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
+                    <h4 className={styles.textTitle}>Benefits</h4>
+                    <div className={styles.line}></div>
+                </Grid>
+            </Grid>
             <BenefitsAll />
         </Container>
     )

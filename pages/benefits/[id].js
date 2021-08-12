@@ -1,12 +1,20 @@
-import styles from './sectionBenefits.module.css'
-import SingleBenefits from "./benefits/singleBenefits";
-import {Container, Grid} from "@material-ui/core";
-import Flip from 'react-reveal/Flip';
+import Layout from '../../components/layout'
+import Sidebar from '../../components/sidebar'
+import Container from "@material-ui/core/Container";
+import {Grid} from "@material-ui/core";
+import styles from "../../components/section/sectionNews.module.css";
+import Flip from "react-reveal/Flip";
+import SingleNews from "../../components/section/news/singleNews";
+import Link from "next/link";
 import Fade from "react-reveal/Fade";
 import React from "react";
-import SingleNews from "./news/singleNews";
+import {BsArrowLeft} from "@react-icons/all-files/bs/BsArrowLeft";
+import {useRouter} from "next/router";
 
-export default function BenefitsAll() {
+
+export default function BenefitsItems() {
+    const router = useRouter()
+
     var benefistArray = [
         {
             id:1,
@@ -94,23 +102,60 @@ export default function BenefitsAll() {
             url :'/contact'
         },]
 
-
+    let post_id = router.query.id-1
+    console.log(post_id)
     return (
-        <Container >
-            <Grid container >
-                <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3}>
-                    <Grid container >
-                    {benefistArray.map((benefist) => (
-                        <SingleBenefits key={benefist.id}
-                            images = {benefist.images}
-                            title = {benefist.title}
-                            id = {benefist.id}
-                        />
-                    ))}
+        <div style={{background: '#FFF6F0', paddingBottom:'10%'}}>
+            <Container >
+                <Grid container >
+                    <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3} className={styles.BackItemsArea}>
+                        <Link  href="/benefit">
+                            <a className={styles.BackItems}>
+                                <BsArrowLeft /> Back
+                            </a>
+                        </Link>
                     </Grid>
                 </Grid>
-            </Grid>
-        </Container>
-      
+                <Grid container  lg={12} md={12} sm={12} xs={12}  className={styles.singleNewsItmeArea} spacing={3}>
+                    <Grid container >
+                        <Grid column item lg={8} md={8} sm={12} xs={12}  spacing={3}  className={styles.newsItemTItleAndData}>
+                            <h1 className={styles.newsitemsTitle}>{benefistArray[post_id].title}</h1>
+                        </Grid>
+                        <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3} className={styles.newsItemTItleAndData}>
+                            {/*<p className={styles.singleNewsData}>Posted on: <span>{benefistArray[post_id].data}</span></p>*/}
+                        </Grid>
+                    </Grid>
+                    <Grid container >
+                        <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3} className={styles.newslistIImg}>
+                            <img className={styles.singleBenefitsImages}  src={benefistArray[post_id].images} alt=""/>
+                        </Grid>
+                        <Grid column item lg={8} md={8} sm={12} xs={12}  spacing={3} className={styles.newslisttext}>
+                            <p className={styles.singleNewsDescription}>{benefistArray[post_id].description}</p>
+                        </Grid>
+                    </Grid>
+                    {/*{benefistArray.map((news) => (*/}
+                    {/*    <SingleNews key={news.id}*/}
+                    {/*                images = {news.images}*/}
+                    {/*                title = {news.title}*/}
+                    {/*                description = {news.description}*/}
+                    {/*                url = {news.url}*/}
+                    {/*                data = {news.data}*/}
+                    {/*                delay = {news.id *100}*/}
+                    {/*    />*/}
+                    {/*))}*/}
+                </Grid>
+
+            </Container>
+        </div>
+    )
+}
+
+BenefitsItems.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            <Sidebar />
+            {page}
+
+        </Layout>
     )
 }

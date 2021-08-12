@@ -6,27 +6,25 @@ import appStore from "../../public/sectionImages/appStore.png";
 import googleStore from "../../public/sectionImages/googleStore.png";
 import webSites from "../../public/sectionImages/website.png";
 import ChromeWtext from "../../public/sectionImages/ChromWtext.png";
-// import SafariWtext from "../../public/sectionImages/safariWtext.png";
 
 import {Container, Grid} from "@material-ui/core";
 import React from 'react';
-import Fade from 'react-reveal/Fade';
-import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
 
 export default function Section2() {
     return (
-        <Container>
+        <Container style={{overflow:"hidden"}}>
 
              <Grid container >
 
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
-                    <Fade left >
+                    <div data-aos="fade-right">
                         <Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the author" />
-                    </Fade>
+                    </div>
                 </Grid>
 
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
-                    <Fade cascade  right  >
+                    <div data-aos="fade-left">
+
                     <h2 className={styles.sectionTitle}>Uraaa! is Cross-Platform</h2>
                     <div className={styles.line}></div>
                     <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
@@ -87,8 +85,7 @@ export default function Section2() {
                         </Grid>
 
                 </Grid>
-                    </Fade>
-
+                    </div>
                 </Grid>
 
             </Grid>

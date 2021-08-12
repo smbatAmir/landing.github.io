@@ -3,6 +3,7 @@ import styles from './../sectionBenefits.module.css'
 import Link from "next/link";
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from "@material-ui/core";
+import React from "react";
 
 const useStyles = makeStyles({
     root: {
@@ -12,18 +13,18 @@ const useStyles = makeStyles({
         height: 140,
     },
 });
-export default function SingleBenefits({images, title, url}) {
+export default function SingleBenefits({id,images, title, url}) {
     const classes = useStyles();
 
     return (
-        <Grid column item md={6}  sm={12}>
+        <Grid column item lg={3} md={3} sm={12} xs={12}>
             <div className={styles.singleBenefits}>
-            <Link href={url} >
-                <a className={styles.cartHref}>
-                    <img className={styles.singleBenefitsImages}  src={images} alt=""/>
-                    <p className={styles.singleBenefitsTitle}>{title}</p>
-                </a>
-            </Link>
+                <Link href={'/benefits/'+id}>
+                    <a className={styles.cartHref}>
+                        <img className={styles.singleBenefitsImages}  src={images} alt=""/>
+                        <p className={styles.singleBenefitsTitle}>{title}</p>
+                    </a>
+                </Link>
             </div>
         </Grid>
 

@@ -7,6 +7,7 @@ import Link from "next/link";
  import safariImg from '../public/safari.png'
  import appAndroidImg from '../public/Android.png'
  import appIosImg from '../public/IOS.png'
+import React from "react";
 
 export default function Footer() {
     const footerColor = {
@@ -17,7 +18,7 @@ export default function Footer() {
             <Grid container style={footerColor}>
                 <Container>
                     <Grid container>
-                        <Grid column item md={3} >
+                        <Grid column item lg={3} md={3} sm={12} xs={12}  >
                             <Grid  >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="46" viewBox="0 0 74 46" fill="none">
                                     <path d="M28.9205 32.5964C28.9205 32.3933 28.9205 32.191 28.9205 31.8864L29.0217 29.8555" fill="white"/>
@@ -52,7 +53,7 @@ export default function Footer() {
                             </Grid>
 
                         </Grid>
-                        <Grid column item md={3}>
+                        <Grid column item lg={3} md={3} sm={12} xs={12} >
                             <ul className={styles.ionfoSecondBar}>
                                 <li>
                                     <p>What is Uraaa ?</p>
@@ -75,7 +76,7 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </Grid>
-                        <Grid column item md={3}>
+                        <Grid column item lg={3} md={3} sm={12} xs={12} >
                             <ul className={styles.ionfoSecondBar}>
                                 <li>
                                     <p>Barcode Scan</p>
@@ -97,7 +98,7 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </Grid>
-                        <Grid column item md={3}>
+                        <Grid column item lg={3} md={3} sm={12} xs={12} >
                             <ul className={styles.ionfoSecondBar}>
                                 <li>
                                     <p>Uraaa! Mobile app:</p>
@@ -118,10 +119,10 @@ export default function Footer() {
 
                     </Grid>
                     <Grid container>
-                        <Grid column item md={6} spacing={3}>
+                        <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                             <p className={styles.footerText}>© Uraaa 2021: All rights recerved</p>
                         </Grid>
-                        <Grid column item md={6} spacing={3} alignContent="flex-end">
+                        <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3} alignContent="flex-end">
                             <p className={styles.footerText}>Follow us:</p>
                         </Grid>
 
