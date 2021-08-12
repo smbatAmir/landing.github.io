@@ -19,7 +19,7 @@ export default function SingleBenefits({id,images, title, url}) {
     return (
         <Grid column item lg={3} md={3} sm={12} xs={12}>
             <div className={styles.singleBenefits}>
-                <Link href={'/benefits/'+id}>
+                <Link href={`/benefits/${id}`}>
                     <a className={styles.cartHref}>
                         <img className={styles.singleBenefitsImages}  src={images} alt=""/>
                         <p className={styles.singleBenefitsTitle}>{title}</p>

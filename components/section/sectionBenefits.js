@@ -100,11 +100,11 @@ export default function BenefitsAll() {
             <Grid container >
                 <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3}>
                     <Grid container >
-                    {benefistArray.map((benefist) => (
-                        <SingleBenefits key={benefist.id}
-                            images = {benefist.images}
-                            title = {benefist.title}
-                            id = {benefist.id}
+                    {benefistArray.map((singleBene) => (
+                        <SingleBenefits key={singleBene.id}
+                            images = {singleBene.images}
+                            title = {singleBene.title}
+                            id = {singleBene.id}
                         />
                     ))}
                     </Grid>

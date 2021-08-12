@@ -27,7 +27,7 @@ export default function SingleNews({id,images, title, url, description, data, de
         // </Grid>
         <Grid column item lg={12} md={12} sm={12} xs={12}  className={styles.singleNewsArea}>
             <div  data-aos ={id %2 == 0? "fade-left": "fade-right" }>
-                <Link href={'/news/'+id} >
+                <Link href={`/news/${id}`} >
                     <a className={styles.cartHref}>
                         <Grid container >
                             <Grid column item lg={4} md={4} sm={12} xs={12}  spacing={3} className={styles.newslistIImg}>
