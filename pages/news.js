@@ -21,7 +21,7 @@ export default function News() {
     }
     var NewsArray = [
         {
-            id:0,
+            id:1,
             images :'https://images.unsplash.com/photo-1571844307880-751c6d86f3f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjB3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
             title :'1thi is sample text',
             description:'1hi is Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,  classical literature,  discovered...samplehi is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -29,7 +29,7 @@ export default function News() {
             data :'21.07.2021'
         },
         {
-            id:1,
+            id:2,
             images :'https://d39l2hkdp2esp1.cloudfront.net/img/photo/126382/126382_00_2x.jpg',
             title :'2thi is sampRichard McClintock, a Latin professor at Latin words, consectetur, fr...le text',
             description:'2hi is samRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage...plehiRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage... is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -37,7 +37,7 @@ export default function News() {
             data :'21.07.2021'
         },
         {
-            id:2,
+            id:3,
             images :'https://previews.123rf.com/images/undrey/undrey1605/undrey160500112/56413726-young-woman-working-as-an-office-manager-planning-work-tasks-writing-down-her-schedule-to-planner-at.jpg',
             title :'3thi is sample text',
             description:'3',
@@ -47,7 +47,7 @@ export default function News() {
         },
 
         {
-            id:3,
+            id:4,
             images :'https://d39l2hkdp2esp1.cloudfront.net/img/photo/126382/126382_00_2x.jpg',
             title :'4thi is sample text',
             description:'4hi is samplehi is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -56,7 +56,7 @@ export default function News() {
         },
 
         {
-            id:4,
+            id:5,
             images :'https://images.unsplash.com/photo-1571844307880-751c6d86f3f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjB3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80',
             title :'thi is sample text',
             description:'hi is samplehi is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -64,7 +64,7 @@ export default function News() {
             data :'21.07.2021'
         },
         {
-            id:5,
+            id:6,
             images :'https://d39l2hkdp2esp1.cloudfront.net/img/photo/126382/126382_00_2x.jpg',
             title :'thi is sample text',
             description:'hi is samplehi is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -72,7 +72,7 @@ export default function News() {
             data :'21.07.2021'
         },
         {
-            id:6,
+            id:7,
             images :'https://previews.123rf.com/images/undrey/undrey1605/undrey160500112/56413726-young-woman-working-as-an-office-manager-planning-work-tasks-writing-down-her-schedule-to-planner-at.jpg',
             title :'thi is sample text',
             description:'',
@@ -82,7 +82,7 @@ export default function News() {
         },
 
         {
-            id:7,
+            id:8,
             images :'https://d39l2hkdp2esp1.cloudfront.net/img/photo/126382/126382_00_2x.jpg',
             title :'thi is sample text',
             description:'hi is samplehi is samplehi is samplehi is samplehi is samplehi is samplehi is sample',
@@ -90,7 +90,7 @@ export default function News() {
             data :'21.07.2021'
         },
         {
-            id:8,
+            id:9,
             images :'https://previews.123rf.com/images/undrey/undrey1605/undrey160500112/56413726-young-woman-working-as-an-office-manager-planning-work-tasks-writing-down-her-schedule-to-planner-at.jpg',
             title :'thi is sample text',
             description:'hi is samplehi is samplehi is samplehi is samplehhi is samplehi is samplehi is samplehi is sampleh',

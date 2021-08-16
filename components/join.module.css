@@ -1,0 +1,46 @@
+.topBar{
+    padding: 20px;
+}
+.joinTitle{
+    font-size: 32px;
+}
+.buttonArea{
+    text-align: end;
+    justify-content: right;
+}
+.nextButton{
+    background: #FF6600!important;
+    border-radius: 32px!important;
+    color:#fff!important;
+    width: 144px!important;
+    height: 44px!important;
+}
+.regForm h2{
+    color: #272744;
+    font-size: 24px;
+}
+.regForm h3{
+    color: #272744;
+    font-size: 18px;
+}
+.closeButton{
+    text-align: right;
+    position: relative;
+    top: 50px;
+}
+.closeButton a{
+    color: #f34313;
+    text-decoration: none;
+}
+.addNewInput{
+    font-size: 16px;
+    color: #FF6600;
+    cursor: pointer;
+}
+.delRow{
+    color: #f34313;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-top: 28px;
+}

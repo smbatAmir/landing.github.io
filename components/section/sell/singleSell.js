@@ -24,6 +24,7 @@ export default function SingleSelling({id,icon, question, answer, delay}) {
     const [clickId, setclickId] = useState();
 
     const handleClick = (event) => {
+
         event.preventDefault();
         if (myClick == false) {
             setmyClick(true)
