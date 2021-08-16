@@ -155,7 +155,7 @@ export default function Join1() {
                 </Grid>
             </Grid>
             {/*<div style={{ marginTop: 20 }}>{JSON.stringify(inputList)}</div>*/}
-
+{/*\*/}
         </Grid>
 
 
