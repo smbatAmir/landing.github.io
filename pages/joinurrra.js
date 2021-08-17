@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -24,6 +24,7 @@ import Join3 from "../components/section/join/join3";
 import Join4 from "../components/section/join/join4";
 import {IoCloseSharp} from "@react-icons/all-files/io5/IoCloseSharp";
 import Done from "../components/section/join/done";
+
 const QontoConnector = withStyles({
 
     alternativeLabel: {
@@ -100,13 +101,35 @@ export default function JoinUrrra() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const steps = getSteps();
-
+    const [nectan, setNectan] = useState({opacity: '1'})
     const handleNext = () => {
+
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        setNectan ({
+            // transition: `opacity  ease-in-out`,
+            opacity: '0',
+        })
+        setTimeout(function(){
+            setNectan ({
+                transition: 'opacity 1.3s, visibility 1.3s',
+                opacity: '1',
+            })
+        }, 300);
+
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        setNectan ({
+            // transition: `opacity  ease-in-out`,
+            opacity: '0',
+        })
+        setTimeout(function(){
+            setNectan ({
+                transition: 'opacity 1.3s, visibility 1.3s',
+                opacity: '1',
+            })
+        }, 300);
     };
 
     const handleReset = () => {
@@ -173,7 +196,8 @@ export default function JoinUrrra() {
 
 
                         <div className={classes.instructions}>{getStepContent(activeStep)}</div>
-                        <div className={styles.buttonArea}>
+
+                        <div className={styles.buttonArea} style={nectan}>
                             <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                                 Back
                             </Button>

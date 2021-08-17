@@ -39,7 +39,7 @@ export default function Join1() {
         background:'#fff'
     }
     return (
-        <div data-aos="fade-left" style={{minHeight:'481px'}}>
+        <div data-aos="fade-left" >
 
         <Grid container  alignItems="center" justify="center" style={styleback}>
             <Grid column lg={12} md={12} sm={12} xs={12} spacing={3} >
