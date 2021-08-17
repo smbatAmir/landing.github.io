@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
                             </Link>
                         </nav>
                     </Grid>
-                    <Grid column item md={3} spacing={3} className={styles.leftMen}>
+                    <Grid column item md={3} spacing={3} className={styles.leftMen} style={{textAlign: 'end'}}>
                         <span onClick={handleOpen} style={{cursor:"pointer"}}>
                             <a>Login</a>
                         </span>

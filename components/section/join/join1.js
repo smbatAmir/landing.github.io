@@ -4,7 +4,8 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import {createTheme, makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import {green} from "@material-ui/core/colors";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 export default function Join1() {
 
@@ -38,6 +39,8 @@ export default function Join1() {
         background:'#fff'
     }
     return (
+        <div data-aos="fade-left">
+
         <Grid container  alignItems="center" justify="center" style={styleback}>
             <Grid column lg={12} md={12} sm={12} xs={12} spacing={3} >
                 <Grid container>
@@ -92,5 +95,6 @@ export default function Join1() {
                 </Grid>
             </Grid>
         </Grid>
+        </div>
     )
 }

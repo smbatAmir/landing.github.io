@@ -10,6 +10,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
 export default function Join1() {
 
     const useStyles = makeStyles((theme) => ({
@@ -66,7 +68,8 @@ export default function Join1() {
         setCountry(event.target.value);
     };
     return (
-    <>
+        <div data-aos="fade-left">
+
         <Grid container  alignItems="center" justify="center" style={styleback}>
             <Grid column lg={12} md={12} sm={12} xs={12} spacing={3} >
                 <Grid container>
@@ -218,7 +221,7 @@ export default function Join1() {
             </Grid>
         </Grid>
         <Join2_1 />
-    </>
+        </div>
 
     )
 }

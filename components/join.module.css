@@ -44,3 +44,59 @@
     height: 24px;
     margin-top: 28px;
 }
+.radioInput a{
+    font-size: 16px;
+    color: #FF6600;
+    text-decoration: none;
+}
+.uploadIcon{
+    font-size: 16px;
+    color: #FF6600;
+    cursor: pointer;
+}
+.numberInput{
+    font-size: 16px;
+    color: #272744;
+}
+/*.accSt{*/
+/*    color: #272744;*/
+/*}*/
+.accSt a{
+    font-size: 16px;
+
+    color: #FF6600;
+    text-decoration: none;
+
+}
+.titleDone{
+    font-size: 24px;
+    color: #F34313!important;
+    display: inline-block;
+    position: relative!important;;
+    top: -60px!important;;
+
+}
+.subtitleDone{
+    font-size: 24px;
+    color: #272744;
+}
+.descriptionDone{
+    font-size: 20px;
+    color: #F34313;
+}
+.imgDone{
+    width: 64px;
+    display: inline-block;
+    /*margin-top: 20px!important; ;*/
+}
+.buttonOK{
+    text-align: center;
+}
+.buttonOK a{
+    padding: 18px 90px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #FF6600;
+    border-radius: 28px;
+    text-decoration: none;
+}

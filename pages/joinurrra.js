@@ -20,7 +20,10 @@ import Image from "next/image";
 import logo from "../public/ura_logo_main.png";
 import Join1 from "../components/section/join/join1";
 import Join2 from "../components/section/join/join2";
+import Join3 from "../components/section/join/join3";
+import Join4 from "../components/section/join/join4";
 import {IoCloseSharp} from "@react-icons/all-files/io5/IoCloseSharp";
+import Done from "../components/section/join/done";
 const QontoConnector = withStyles({
 
     alternativeLabel: {
@@ -86,11 +89,11 @@ function getStepContent(step) {
         case 1:
             return <Join2 />;
         case 2:
-            return 'Contact Person';
+            return <Join3 />;
         case 3:
-            return 'Terms & conditions';
+            return <Join4 />;
         default:
-            return 'Unknown step';
+            return <Done/>;
     }
 }
 export default function JoinUrrra() {
@@ -138,12 +141,19 @@ export default function JoinUrrra() {
             <div>
                 {activeStep === steps.length ? (
                     <div>
-                        <Typography className={classes.instructions}>
-                            All steps completed - you&apos;re finished
-                        </Typography>
-                        <Button onClick={handleReset} className={classes.button}>
-                            Reset
-                        </Button>
+                        <div className={classes.instructions}>
+                            <Done/>
+                        </div>
+                        {/*<Button onClick={handleReset} className={classes.button}>*/}
+                        {/*    Reset*/}
+                        {/*</Button>*/}
+                            <Grid container   >
+                                <Grid column lg={12} md={12} sm={12} xs={12} spacing={3} className={styles.buttonOK} >
+                                    <Link   href="/">
+                                        <a>OK</a>
+                                    </Link>
+                                </Grid>
+                            </Grid>
                     </div>
                 ) : (
                     <Grid container  alignItems="center" justify="center">
