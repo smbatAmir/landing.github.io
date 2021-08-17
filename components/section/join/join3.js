@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import {createTheme, makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import {green} from "@material-ui/core/colors";
 import {  withStyles } from '@material-ui/core';
-import MuiPhoneNumber from "material-ui-phone-number";
+// import MuiPhoneNumber from "material-ui-phone-number";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -111,12 +111,12 @@ export default function Join3() {
                         />
                     </Grid>
                     <Grid column lg={4} md={4} sm={12} xs={12} spacing={3} style={{textAlign:'center'}}>
-                        <MuiPhoneNumber
-                            className={classes.margin}
-                            variant="outlined"
-                            defaultCountry={"us"}
-                            regions={['america', 'europe', 'asia', 'oceania', 'africa']}
-                        />
+                        {/*<MuiPhoneNumber*/}
+                        {/*    className={classes.margin}*/}
+                        {/*    variant="outlined"*/}
+                        {/*    defaultCountry={"us"}*/}
+                        {/*    regions={['america', 'europe', 'asia', 'oceania', 'africa']}*/}
+                        {/*/>*/}
                     </Grid>
                     <Grid column lg={4} md={4} sm={12} xs={12} spacing={3} style={{textAlign:'center'}}>
                         <TextField
