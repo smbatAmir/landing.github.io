@@ -68,7 +68,7 @@ export default function Join1() {
         setCountry(event.target.value);
     };
     return (
-        <div data-aos="fade-left">
+        <div data-aos="fade-left" style={{minHeight:'481px'}}>
 
         <Grid container  alignItems="center" justify="center" style={styleback}>
             <Grid column lg={12} md={12} sm={12} xs={12} spacing={3} >

@@ -131,7 +131,7 @@ export default function JoinUrrra() {
                 <div className={classes.root}>
 
 
-            <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
+            <Stepper  alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
                 {steps.map((label) => (
                     <Step key={label} >
                         <StepLabel >{label}</StepLabel>
