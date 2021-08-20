@@ -1,18 +1,25 @@
 .sectionTitle{
+    font-family: Montserrat-ExtraBold;
+
     font-style: normal;
-    /*font-weight: 800;*/
     font-size: 64px;
-    /*line-height: 28px;*/
     color: #272744;
+    margin:0;
+    padding-top: 20px;
 }
 .sectionSubTitle{
+    font-family: Montserrat-ExtraBold;
+
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 60px;
     /*line-height: 28px;*/
     color: #FF6600;
+    margin:0;
+    /*padding-top: 20px;*/
 }
 .textTitle{
+    font-family: Montserrat-ExtraBold;
 
     font-style: normal;
     /*font-weight: 800;*/
@@ -21,6 +28,8 @@
     color: #272744;
 }
 .textDescription{
+    font-family: Montserrat-SemiBold;
+
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 18px;
@@ -45,4 +54,16 @@
     color: #AFAFC0;
     font-size: 16px;
 
+}
+.storeIconInfo{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #AFAFC0;
+}
+.brIcon{
+    width: 134px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 12px rgba(184, 54, 0, 0.15);
+    border-radius: 8px;
 }

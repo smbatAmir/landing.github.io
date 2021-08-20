@@ -1,31 +1,43 @@
+
 .sectionTitle{
+    font-family: Montserrat-ExtraBold;
     font-style: normal;
-    /*font-weight: 800;*/
     font-size: 64px;
-    line-height: 28px;
     color: #272744;
+    margin:0;
+    padding-top: 20px;
+
 }
 .sectionSubTitle{
+    font-family: Montserrat-ExtraBold;
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 64px;
     /*line-height: 28px;*/
     color: #FF6600;
+    margin:0;
+
 }
 .textTitle{
+    font-family: Montserrat-Bold;
 
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 32px;
     /*line-height: 39px;*/
     color: #272744;
+    margin:0;
 }
 .textDescription{
+    font-family: Montserrat-SemiBold;
+
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 18px;
     /*line-height: 30px;*/
     color: #272744;
+    margin:0;
+    padding: 10px;
 
 }
 .textDescription span{
@@ -35,11 +47,13 @@
     /*line-height: 20px;*/
     text-transform: capitalize;
     color: #FF6600;
+
 }
 .line{
     width: 45%;
     height: 2px;
     background-color: #FF6600;
+
 }
 .playArea{
     position: absolute;
@@ -70,13 +84,26 @@
 .secondSee{
     position: absolute;
     columns: 2;
-    width: 70%;
-    top: 475px;
+    width: 63%;
+    top:  331px;
     background-color: #fff;
     z-index: 55;
     box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
     border-radius: 32px;
     padding: 20px;
+}
+@media  (max-width: 980px) {
+    .secondSee{
+        /*position: absolute;*/
+        /*columns: 1;*/
+        width: 91%;
+        /*top:  331px;*/
+        /*background-color: #fff;*/
+        /*z-index: 55;*/
+        /*box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);*/
+        /*border-radius: 32px;*/
+        /*padding: 20px;*/
+    }
 }
 .closeModalIcon{
     position: absolute;
@@ -92,6 +119,7 @@
     cursor: pointer;
 }
 .joinButton{
+    font-family: Montserrat-Bold;
 
     background: #FF6600;
     border-radius: 32px;
@@ -99,6 +127,7 @@
     color: #fff;
     font-size: 16px;
     padding: 10px 20px;
+    /*margin-left: 20px;*/
 }
 .joinButtonArea{
     text-align: end;
@@ -116,3 +145,27 @@
     text-align: end;
     width:100%;
 }
+.container {
+    max-width: 500px;
+}
+
+.videoLaptop {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;}
+
+.videoArea {
+    box-sizing: border-box;
+    background: url('http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2FsectionImages%2Fhero_section_guy.d3393434454ba7485a349c401e2c205e.png&w=750&q=75') center center no-repeat;
+    background-size: contain;
+    padding: 19% 30% 27% 51%;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;}
+
+/*@media  (max-width: 945px) {*/
+
+/*}*/

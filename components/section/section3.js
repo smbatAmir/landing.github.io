@@ -7,7 +7,9 @@ import TransitionsModal from "./modalVideo";
 import Fade from "react-reveal/Fade";
 import React, {useEffect} from "react";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
+import ChromeWtext from "../../public/sectionImages/ChromWtext.png"; // You can also use <link> for styles
+import SafariWtext from "../../public/sectionImages/SafariWtext.png"; // You can also use <link> for styles
 
 export default function Section3() {
     useEffect(() => {
@@ -33,7 +35,29 @@ export default function Section3() {
                     < TransitionsModal
                         videoURL={'https://www.youtube.com/watch?v=xT65UQM0e-Y'}
                     />
-                    <p className={styles.webExtension}>Web extension:</p>
+                    {/*<p className={styles.webExtension}>Web extension:</p>*/}
+                        <Grid container >
+                            <Grid column item lg={12} md={12} sm={12} xs={12}  spacing={3}>
+                                <p className={styles.storeIconInfo}>Web extension:</p>
+                            </Grid>
+                            <Grid column item lg={6} md={8} sm={12} xs={12}  spacing={3}>
+                                <Grid container >
+                                    <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
+                                        <div className={styles.brIcon}>
+                                            <Image  src={ChromeWtext} alt="Picture of the Chrome Icon" />
+                                        </div>
+                                    </Grid>
+                                    <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
+                                        <div className={styles.brIcon}>
+                                            <Image  src={SafariWtext} alt="Picture of the Safari Icon" />
+
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+
                     </div>
                 </Grid>
 

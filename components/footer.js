@@ -3,11 +3,14 @@ import Image from "next/image";
 import section1RightBar from "../public/sectionImages/hero_section_guy.png";
 import {Container, Grid} from "@material-ui/core";
 import Link from "next/link";
- import chromeImg from '../public/chrom.png'
- import safariImg from '../public/safari.png'
+ import chromeImg from '../public/sectionImages/chromFooter.png'
+ import safariImg from '../public/sectionImages/safariFooter.png'
  import appAndroidImg from '../public/Android.png'
  import appIosImg from '../public/IOS.png'
 import React from "react";
+import {FaFacebookF} from "@react-icons/all-files/fa/FaFacebookF";
+import {FiInstagram} from "@react-icons/all-files/fi/FiInstagram";
+import {RiFacebookFill} from "@react-icons/all-files/ri/RiFacebookFill";
 
 export default function Footer() {
     const footerColor = {
@@ -38,7 +41,7 @@ export default function Footer() {
                             <Grid container >
                                 <Grid column item md={6} spacing={2}>
                                     <div className={styles.joinButtonArea}>
-                                        <Link   href="">
+                                        <Link   href="/joinurrra">
                                             <a className={styles.joinButton} > Join Uraaa!</a>
                                         </Link>
                                     </div>
@@ -68,11 +71,9 @@ export default function Footer() {
                             <ul className={styles.ionfoSecondBarSecond}>
                                 <li>
                                     <Image  className={styles.brimages} src={chromeImg} alt="Picture of the chrome" />
-                                        Chrome
                                 </li>
                                 <li>
                                     <Image className={styles.brimages}  src={safariImg} alt="Picture of the safari" />
-                                    Safari
                                 </li>
                             </ul>
                         </Grid>
@@ -123,7 +124,7 @@ export default function Footer() {
                             <p className={styles.footerText}>© Uraaa 2021: All rights recerved</p>
                         </Grid>
                         <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3} alignContent="flex-end">
-                            <p className={styles.footerText}>Follow us:</p>
+                            <p className={styles.footerText}>Follow us: <RiFacebookFill /> <FiInstagram /></p>
                         </Grid>
 
                     </Grid>

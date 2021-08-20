@@ -10,6 +10,7 @@ import Selling from "../components/section/sectionSelling";
 import News from "../components/section/sectionNews";
 import Faqs from "../components/section/sectionFAQ";
 import Contact from "../components/section/sectionContact";
+import Section5 from "../components/section/section5";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
           <Section1 />
           <Section3 />
           <Section4 />
+          <Section5 />
           <Section2 />
           {/*<Benefits />*/}
           <Selling />

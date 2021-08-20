@@ -6,6 +6,7 @@ import appStore from "../../public/sectionImages/appStore.png";
 import googleStore from "../../public/sectionImages/googleStore.png";
 import webSites from "../../public/sectionImages/website.png";
 import ChromeWtext from "../../public/sectionImages/ChromWtext.png";
+import SafariWtext from "../../public/sectionImages/SafariWtext.png"; // You can also use <link> for styles
 
 import {Container, Grid} from "@material-ui/core";
 import React from 'react';
@@ -18,7 +19,7 @@ export default function Section2() {
 
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                     <div data-aos="fade-right">
-                        <Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the author" />
+                        <Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the Grab Buyers" />
                     </div>
                 </Grid>
 
@@ -77,7 +78,7 @@ export default function Section2() {
                                 </Grid>
                                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                                     <div className={styles.brIcon}>
-                                        <Image  src={ChromeWtext} alt="Picture of the Safari Icon" />
+                                        <Image  src={SafariWtext} alt="Picture of the Safari Icon" />
 
                                     </div>
                                 </Grid>

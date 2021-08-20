@@ -16,6 +16,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="e2912177-e3fc-4d4d-a7cc-37682c0a8d67" name="masterhome">
+        <fileTransfer rootFolder="/var/www/wsam/data/www/masterhome.website.am" accessType="SFTP" host="213.159.215.212" port="22" sshConfigId="f428aa42-6849-47e0-bba4-ec260df8b089" sshConfig="root@213.159.215.212:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

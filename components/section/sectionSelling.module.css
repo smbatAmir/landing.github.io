@@ -1,5 +1,6 @@
 
 .textTitle{
+    font-family: Montserrat-ExtraBold;
 
     font-style: normal;
     /*font-weight: 800;*/
@@ -7,6 +8,8 @@
     color: #272744;
 }
 .sellingDesc{
+    font-family: Montserrat-SemiBold;
+
     font-size: 32px;
     color: #FF6600;
     display: inline-block;
@@ -49,11 +52,14 @@
     color: #FF7E27;
 }
 .joinButtonArea{
+    font-family: Montserrat-SemiBold;
+
     margin-top: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 .joinButton{
+    font-family: Montserrat-SemiBold;
 
     background: #FF6600;
     border-radius: 32px;

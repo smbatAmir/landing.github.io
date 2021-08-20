@@ -1,0 +1,87 @@
+.sectionTitle{
+    font-family: Montserrat-ExtraBold;
+
+    padding: 0;
+    font-style: normal;
+    font-size: 48px;
+    color: #272744;
+    margin:0;
+
+}
+.sectionSubTitle{
+    font-family: Montserrat-ExtraBold;
+
+    padding: 0;
+
+    font-style: normal;
+    font-size: 48px;
+    color: #FF6600;
+    margin:0;
+
+}
+
+.sectionTitle2{
+    font-family: Montserrat-SemiBold;
+
+    padding: 100px 0 0 120px;
+    font-style: normal;
+    font-size: 48px;
+    color: #272744;
+    margin:0;
+
+}
+.sectionSubTitle2{
+    font-family: Montserrat-SemiBold;
+
+    font-style: normal;
+    font-size: 48px;
+    color: #FF6600;
+    margin:0;
+
+}
+.endColum{
+    margin-top: -180px;
+}
+.colTitle{
+    font-size: 24px;
+    color: #272744;
+    font-weight: 800;
+
+}
+.colTitle span{
+    color: #FF6600;
+}
+.listCol li::marker{
+    color: #FF6600;
+
+}
+
+.listCol li{
+    color: #272744;
+    font-size: 18px;
+    font-weight: bold;
+}
+.backCircle{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(130.31deg, #FF6600 16.64%, #F34313 92.88%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    top: 800px;
+}
+.backArea{
+    z-index: 5;
+    background-image: url('../../public/sectionImages/backArea.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    height: 450px;
+    position: relative;
+}
+.backImages{
+    position: relative!important;
+    top: -240px!important;
+    margin: 0;
+    padding:0 ;
+}

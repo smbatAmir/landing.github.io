@@ -9,9 +9,13 @@ import {IoClose} from "@react-icons/all-files/io5/IoClose";
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
+import ReactPlayer from "react-player"; // You can also use <link> for styles
 
 export default function Section1() {
+    const videoPosition = {
+        position:'absolute',
+    }
     useEffect(() => {
         AOS.init({duration: 2000});
     }, [])
@@ -48,26 +52,27 @@ export default function Section1() {
                         <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                             Contrary to popular belief to popular belief, Lorem Ipsum is not simply random text. <span className={styles.rm} onClick={openModal}>Read more</span></p>
                         <div>
-                            <Link   href="">
-                                <a className={styles.joinButton} > Join Uraaa!</a>
+                            <Link   href="/joinurrra">
+                                <a className={styles.joinButton} > Join & Get 30% off</a>
                             </Link>
                         </div>
                     </div>
-                    <div style={clickOpen} className={styles.secondSee}>
-                        < IoClose className={styles.closeModalIcon} onClick={closeModal}/>
-                        <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-                        <div className={styles.joinButtonArea}>
-                            <Link   href="">
-                                <a className={styles.joinButton} > Join Uraaa!</a>
-                            </Link>
-                        </div>
-                    </div>
+
                 </div>
 
             </Grid>
+            <div style={clickOpen} className={styles.secondSee}>
+                < IoClose className={styles.closeModalIcon} onClick={closeModal}/>
+                <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                <div className={styles.joinButtonArea}>
+                    <Link   href="/joinurrra">
+                        <a className={styles.joinButton} > Join Uraaa!</a>
+                    </Link>
+                </div>
+            </div>
             <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3} className={styles.playAreaPar}>
                 <div data-aos="fade-right">
 
@@ -77,7 +82,12 @@ export default function Section1() {
                         videoURL={'https://www.youtube.com/watch?v=LXb3EKWsInQ'}
                     />
                 </div>
-                <Image  src={section1RightBar} alt="Picture of the author" style={img} />
+                <Image  src={section1RightBar} alt="Picture of the author" style={img}  />
+                {/*<div style={test}>*/}
+                {/*    <ReactPlayer className={styles.videoArea} width='150px' url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />*/}
+
+                {/*</div>*/}
+
                 </div>
             </Grid>
         </Grid>

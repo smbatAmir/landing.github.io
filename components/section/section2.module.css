@@ -1,4 +1,6 @@
 .sectionTitle{
+    font-family: Montserrat-ExtraBold;
+
     font-style: normal;
     /*font-weight: 800;*/
     font-size: 48px;
@@ -7,6 +9,8 @@
 
 
 .textDescription{
+    font-family: Montserrat-Bold;
+
     font-style: normal;
     /*font-weight: 600;*/
     font-size: 18px;
