@@ -57,8 +57,10 @@ const useStyles = makeStyles((theme) => ({
          position: 'sticky',
          top: '0',
          background: '#fff',
-         zIndex: '85'
-     }
+         zIndex: '85',
+         boxShadow: '8px 28px 74px rgba(184, 54, 0, 0.06)'
+
+ }
      console.log(router.pathname)
 
      // const fontIcon = {
@@ -76,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
      }
     if (isWidthUp('md', props.width)) {
         return (
-            <Container style={forHeaderSt}>
+            <div style={forHeaderSt}>
+            <Container >
                 <Grid container className={styles.header}>
                     <Grid column item md={1} spacing={3}>
                         <Link href="/">
@@ -191,10 +194,12 @@ const useStyles = makeStyles((theme) => ({
                     </Fade>
                 </Modal>
             </Container>
+            </div>
         )
     }else{
         return (
-            <Container style={forHeaderSt}>
+            <div style={forHeaderSt}>
+            <Container >
                 <Grid container className={styles.header}>
                     <Grid column item lg={1} md={1} sm={6} xs={6} spacing={3}>
                         <Link href="/">
@@ -228,6 +233,7 @@ const useStyles = makeStyles((theme) => ({
 
                 </Grid>
             </Container>
+            </div>
         )
     }
 }

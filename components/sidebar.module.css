@@ -3,7 +3,7 @@
     padding-bottom: 10px;
     position: sticky;
     left: 0;
-    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
+    /*box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);*/
 }
 .navBar a {
     color: #272744;
