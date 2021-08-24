@@ -15,8 +15,11 @@ export default function Section2() {
     return (
         <Container style={{overflow:"hidden"}}>
 
-             <Grid container >
 
+
+
+
+             <Grid container >
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                     <div data-aos="fade-right">
                         <Image className={styles.sectinoImages} src={section2leftbar} alt="Picture of the Grab Buyers" />
