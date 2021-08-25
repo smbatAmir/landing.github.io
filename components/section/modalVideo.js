@@ -33,7 +33,7 @@ export default function TransitionsModal({videoURL}) {
     return (
         <div>
             <h4  onClick={handleOpen} className={styles.playButton}>
-                <FiPlay /> Watch The Video
+                <FiPlay />
             </h4>
 
             <Modal

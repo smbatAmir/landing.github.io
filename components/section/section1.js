@@ -14,15 +14,15 @@ import ReactPlayer from "react-player"; // You can also use <link> for styles
 
 export default function Section1() {
     const videoPosition = {
-        position:'absolute',
+        position: 'absolute',
     }
     useEffect(() => {
         AOS.init({duration: 2000});
     }, [])
-    const img ={
+    const img = {
         position: 'relative'
     }
-    const vid ={
+    const vid = {
         position: 'absolute',
         right: '155px',
         top: '281px',
@@ -32,65 +32,87 @@ export default function Section1() {
     const openModal = (event) => {
         event.preventDefault();
         setclickOpen({display: 'block'})
-        }
+    }
     const closeModal = (event) => {
         event.preventDefault();
         setclickOpen({display: 'none'})
     }
 
     return (
-        <Container>
-        <Grid container >
-            <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3}>
-
-                <div data-aos="fade-left">
-                    <h2 className={styles.sectionTitle}>Start Selling</h2>
-                    <h3 className={styles.sectionSubTitle}>With Uraaa!</h3>
-                    <div className={styles.line}></div>
-                    <div >
-                        <h4 className={styles.textTitle}>What is Uraaa ?</h4>
-                        <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief to popular belief, Lorem Ipsum is not simply random text. <span className={styles.rm} onClick={openModal}>Read more</span></p>
+        <Container className={styles.section1Container}>
+            <Grid container>
+                <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3}>
+                    <div data-aos="fade-left">
+                        <h2 className={styles.sectionTitle}>Sell More with Desired Prices & </h2>
+                        <h3 className={styles.sectionSubTitle}> Make More Money!</h3>
                         <div>
-                            <Link   href="/joinurrra">
-                                <a className={styles.joinButton} > Join & Get 30% off</a>
+                            <h4 className={styles.textTitle}>What is Uraaa ?</h4>
+                            <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
+                                random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                                over 2000 years old.
+                                Contrary to popular belief to popular belief, Lorem Ipsum is not simply random
+                                text. <span className={styles.rm} onClick={openModal}>Read more</span>
+                            </p>
+                            <div>
+                                <Link href="/joinurrra">
+                                    <a className={styles.joinButton}> Join & Get 30% off</a>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </Grid>
+
+                <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3} className={styles.playAreaPar}>
+                    <div data-aos="fade-right">
+                        <div className={styles.playArea}>
+                            <TransitionsModal
+                                videoURL={'https://www.youtube.com/watch?v=LXb3EKWsInQ'}
+                            />
+                            <h3>Watch this video to learn more:</h3>
+                        </div>
+
+                        <Image src={section1RightBar} alt="Picture of the author" style={img}/>
+
+                        {/*<div style={test}>*/}
+                        {/*    <ReactPlayer className={styles.videoArea} width='150px' url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />*/}
+                        {/*</div>*/}
+
+                    </div>
+                </Grid>
+
+                <Grid column item lg={12} md={12} sm={12} xs={12} spacing={3}>
+                    <div style={clickOpen} className={styles.secondSee}>
+                        <div className={styles.secondSeeTitle}>
+                            <h4 className={styles.textTitle}>What is Uraaa ?</h4>
+                            <IoClose className={styles.closeModalIcon} onClick={closeModal}/>
+                        </div>
+                        <div>
+                            <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
+                                random
+                                text. It has roots in a piece of classical Latin literature from 45 BC, making it over
+                                2000
+                                years old.
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular
+                                belief,
+                                Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                                literature
+                                from 45 BC, making it over 2000 years old.
+                                Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular
+                                belief,
+                                Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                                literature
+                                from 45 BC, making it over 2000 years old.
+                                Contrary to popular belief, Lorem Ipsum is not simply random text.
+                            </p>
+                        </div>
+                        <div className={styles.joinButtonArea}>
+                            <Link href="/joinurrra">
+                                <a className={styles.joinButton}> Join Uraaa!</a>
                             </Link>
                         </div>
                     </div>
-
-                </div>
-
+                </Grid>
             </Grid>
-            <div style={clickOpen} className={styles.secondSee}>
-                < IoClose className={styles.closeModalIcon} onClick={closeModal}/>
-                <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                    Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-                <div className={styles.joinButtonArea}>
-                    <Link   href="/joinurrra">
-                        <a className={styles.joinButton} > Join Uraaa!</a>
-                    </Link>
-                </div>
-            </div>
-            <Grid column item  lg={6} md={6} sm={12} xs={12} spacing={3} className={styles.playAreaPar}>
-                <div data-aos="fade-right">
-
-                <div className={styles.playArea}>
-                    <h3>Increase your income using our product!</h3>
-                    < TransitionsModal
-                        videoURL={'https://www.youtube.com/watch?v=LXb3EKWsInQ'}
-                    />
-                </div>
-                <Image  src={section1RightBar} alt="Picture of the author" style={img}  />
-                {/*<div style={test}>*/}
-                {/*    <ReactPlayer className={styles.videoArea} width='150px' url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />*/}
-
-                {/*</div>*/}
-
-                </div>
-            </Grid>
-        </Grid>
         </Container>
     )
 }

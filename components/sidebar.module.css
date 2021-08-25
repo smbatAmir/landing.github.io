@@ -1,68 +1,96 @@
-.header{
+.navBarWraper {
+    box-shadow: 8px 28px 74px rgba(234, 68, 18, 0.06);
+}
+
+.navBarWraper > div {
+    max-width: 1380px;
+    border: 1px solid greenyellow;
+    padding: 0;
+}
+
+.header {
     padding-top: 30px;
     padding-bottom: 10px;
     position: sticky;
     left: 0;
-    /*box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);*/
 }
+
 .navBar a {
     color: #272744;
     text-decoration: none;
     font-size: 16px;
     padding: 20px 38px;
+    font-weight: 600;
 }
 
-.leftMen a{
+.leftMen a {
     color: #272744;
     text-decoration: none;
     font-size: 16px;
     padding: 12px 24px;
-    text-align: end!important;
+    text-align: end !important;
+    font-weight: 600;
 }
-.join{
+
+.join {
     background: #FF6600;
     padding: 12px 24px;
     border-radius: 32px;
 }
-.join span{
 
+.join span {
     color: #ffffff;
 }
-.navBarMobile ul{
+
+.navBarMobile ul {
     list-style: none;
 }
+
 .navBarMobile ul li {
-   cursor: pointer;
+    cursor: pointer;
 }
+
 .navBarMobile ul li a {
     text-decoration: none;
     color: #272744;
 }
-.joinMobile span{
+
+.joinMobile span {
     color: #FF6600;
 }
-.burgermenuIcon{
+
+.burgermenuIcon {
     width: 38px;
     height: 38px;
     /*left: calc(50% - 38px/2 + 144.5px);*/
 }
-.burgermenuButton{
+
+.burgermenuButton {
     text-align: end;
 }
+
 /*.activeLink{*/
 /*    background-color: #0070f3;*/
 /*}*/
-.activeLink{
-color: #FF6600;
-    padding-right: 5px ;
+.activeLink {
+    color: #FF6600;
+    padding-right: 5px;
 }
-.activeLink >svg{
+
+.activeLink > svg {
     font-size: 10px;
 }
-.inactiveLink{
+
+.inactiveLink {
     color: #FFF;
-    padding-right: 5px ;
+    padding-right: 5px;
 }
-.inactiveLink >svg{
+
+.inactiveLink > svg {
     font-size: 10px;
+}
+
+
+@media (min-width: 1280px) {
+
 }

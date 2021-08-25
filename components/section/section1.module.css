@@ -1,99 +1,157 @@
+.section1Container {
+    border: 1px solid red;
+    max-width: 1380px !important;
+    margin-top: 30px;
+    padding: 0 !important;
+}
 
-.sectionTitle{
+/*left side*/
+.sectionTitle, .sectionSubTitle {
     font-family: Montserrat-ExtraBold;
     font-style: normal;
     font-size: 64px;
     color: #272744;
-    margin:0;
-    padding-top: 20px;
-
+    margin: 0;
+    padding-top: 60px;
+    font-weight: 800;
+    line-height: 78px;
 }
-.sectionSubTitle{
-    font-family: Montserrat-ExtraBold;
-    font-style: normal;
-    /*font-weight: 800;*/
-    font-size: 64px;
-    /*line-height: 28px;*/
+
+.sectionSubTitle {
     color: #FF6600;
-    margin:0;
-
+    padding-top: 0;
 }
-.textTitle{
+
+.textTitle {
     font-family: Montserrat-Bold;
-
     font-style: normal;
-    /*font-weight: 800;*/
+    font-weight: 800;
     font-size: 32px;
-    /*line-height: 39px;*/
+    line-height: 39px;
     color: #272744;
-    margin:0;
+    margin: 50px 0 0;
 }
-.textDescription{
+
+.textDescription {
     font-family: Montserrat-SemiBold;
-
     font-style: normal;
-    /*font-weight: 600;*/
+    font-weight: 600;
     font-size: 18px;
-    /*line-height: 30px;*/
+    line-height: 30px;
     color: #272744;
-    margin:0;
-    padding: 10px;
-
+    margin: 16px 0 40px;
 }
-.textDescription span{
-    font-style: normal;
-    /*font-weight: 600;*/
+
+.textDescription span {
     font-size: 16px;
-    /*line-height: 20px;*/
-    text-transform: capitalize;
     color: #FF6600;
-
 }
-.line{
-    width: 45%;
-    height: 2px;
-    background-color: #FF6600;
 
-}
-.playArea{
-    position: absolute;
-    z-index: 5;
-    right: 10px;
-    top: 48px;
-    width: 39%;
+.rm {
     cursor: pointer;
 }
-.playArea h3{
-    color: #272744;
-    font-size: 18px;
 
+.joinButton {
+    font-family: Montserrat-Bold;
+    background: #FF6600;
+    border-radius: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 18px 25px;
+    font-weight: 600;
 }
-.playButton{
+
+/*right side*/
+.playAreaPar {
+    position: relative;
+}
+
+.playArea {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 100px;
+    cursor: pointer;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playArea h3 {
+    color: #272744;
+    font-size: 22px;
+    width: 200px;
+}
+
+.playAreaPar img {
+    width: 690px;
+}
+.playButton {
     color: #ffffff;
     font-size: 16px;
     background: #272744;
     border-radius: 32px;
-    padding: 12px 24px;
+    padding: 12px 15px;
     width: fit-content;
     cursor: pointer;
 }
-.playAreaPar{
-    position: relative;
-}
-
-.secondSee{
+/*read more section*/
+.secondSee {
     position: absolute;
     columns: 2;
-    width: 63%;
-    top:  331px;
+    width: 62%;
+    top: 350px;
     background-color: #fff;
     z-index: 55;
     box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
     border-radius: 32px;
-    padding: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column;
 }
-@media  (max-width: 980px) {
-    .secondSee{
+
+.secondSeeTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.closeModalIcon {
+    color: #F34313;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.secondSee h4 {
+    margin: 0;
+}
+
+.joinButtonArea {
+    text-align: end;
+}
+.joinButtonArea > .joinButton {
+    padding: 12px 24px;
+}
+
+
+
+
+/*derevs anhayt styler____________________*/
+.border {
+    border: 1px solid red;
+}
+
+.line {
+    width: 45%;
+    height: 2px;
+    background-color: #FF6600;
+}
+
+
+
+@media (max-width: 980px) {
+    .secondSee {
         /*position: absolute;*/
         /*columns: 1;*/
         width: 91%;
@@ -105,46 +163,23 @@
         /*padding: 20px;*/
     }
 }
-.closeModalIcon{
-    position: absolute;
-   right: 20px;
-    top: 4px;
-    color:#F34313;
-    cursor: pointer;
 
-
-
-}
-.rm{
-    cursor: pointer;
-}
-.joinButton{
-    font-family: Montserrat-Bold;
-
-    background: #FF6600;
-    border-radius: 32px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    /*margin-left: 20px;*/
-}
-.joinButtonArea{
-    text-align: end;
-}
-.sendButton{
+.sendButton {
     outline: none;
     border: none;
     cursor: pointer;
 }
-.sendButton span{
+
+.sendButton span {
     color: #FF6600;
     font-size: 18px;
 }
-.sendArea{
+
+.sendArea {
     text-align: end;
-    width:100%;
+    width: 100%;
 }
+
 .container {
     max-width: 500px;
 }
@@ -153,7 +188,8 @@
     position: relative;
     padding-top: 25px;
     padding-bottom: 67.5%;
-    height: 0;}
+    height: 0;
+}
 
 .videoArea {
     box-sizing: border-box;
@@ -164,7 +200,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;}
+    height: 100%;
+}
 
 /*@media  (max-width: 945px) {*/
 
