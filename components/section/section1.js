@@ -80,39 +80,41 @@ export default function Section1() {
                     </div>
                 </Grid>
 
-                <Grid column item lg={12} md={12} sm={12} xs={12} spacing={3}>
-                    <div style={clickOpen} className={styles.secondSee}>
-                        <div className={styles.secondSeeTitle}>
-                            <h4 className={styles.textTitle}>What is Uraaa ?</h4>
-                            <IoClose className={styles.closeModalIcon} onClick={closeModal}/>
-                        </div>
-                        <div>
-                            <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
-                                random
-                                text. It has roots in a piece of classical Latin literature from 45 BC, making it over
-                                2000
-                                years old.
-                                Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular
-                                belief,
-                                Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                                literature
-                                from 45 BC, making it over 2000 years old.
-                                Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular
-                                belief,
-                                Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                                literature
-                                from 45 BC, making it over 2000 years old.
-                                Contrary to popular belief, Lorem Ipsum is not simply random text.
-                            </p>
-                        </div>
-                        <div className={styles.joinButtonArea}>
-                            <Link href="/joinurrra">
-                                <a className={styles.joinButton}> Join Uraaa!</a>
-                            </Link>
-                        </div>
-                    </div>
-                </Grid>
             </Grid>
+
+            <Grid column item lg={12} md={12} sm={12} xs={12} spacing={3}>
+                <div style={clickOpen} className={styles.secondSee}>
+                    <div className={styles.secondSeeTitle}>
+                        <h4 className={styles.textTitle}>What is Uraaa ?</h4>
+                        <IoClose className={styles.closeModalIcon} onClick={closeModal}/>
+                    </div>
+                    <div>
+                        <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
+                            random
+                            text. It has roots in a piece of classical Latin literature from 45 BC, making it over
+                            2000
+                            years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular
+                            belief,
+                            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                            literature
+                            from 45 BC, making it over 2000 years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular
+                            belief,
+                            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                            literature
+                            from 45 BC, making it over 2000 years old.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text.
+                        </p>
+                    </div>
+                    <div className={styles.joinButtonArea}>
+                        <Link href="/joinurrra">
+                            <a className={styles.joinButton}> Join Uraaa!</a>
+                        </Link>
+                    </div>
+                </div>
+            </Grid>
+
         </Container>
     )
 }
