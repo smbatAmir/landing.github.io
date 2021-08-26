@@ -62,7 +62,7 @@ function Sidebar(props) {
         boxShadow: '8px 28px 74px rgba(184, 54, 0, 0.06)'
 
     }
-    console.log(router.pathname)
+    // console.log(router.pathname)
 
     // const fontIcon = {
     //     fontSize:"10px",

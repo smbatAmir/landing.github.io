@@ -2,7 +2,7 @@ import Layout from '../../components/layout'
 import Sidebar from '../../components/sidebar'
 import Container from "@material-ui/core/Container";
 import {Grid} from "@material-ui/core";
-import styles from "../../components/section/sectionNews.module.css";
+import styles from "../../styles/News.module.css";
 import Flip from "react-reveal/Flip";
 import SingleNews from "../../components/section/news/singleNews";
 import Link from "next/link";

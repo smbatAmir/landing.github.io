@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from './../sectionNews.module.css'
+import styles from '../../../styles/News.module.css'
 import Link from "next/link";
 import {Grid, Paper} from "@material-ui/core";
 import React, {useEffect} from "react";
