@@ -17,7 +17,7 @@ export default function Section3() {
     }, [])
     return (
 
-        <Container>
+        <Container className={styles.section3Container}>
             <Grid container >
                 <Grid column item lg={6} md={6} sm={12} xs={12}  spacing={3}>
                     <div data-aos="fade-right">

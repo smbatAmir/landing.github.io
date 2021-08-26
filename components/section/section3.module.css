@@ -1,3 +1,9 @@
+.section3Container{
+    border: 1px solid greenyellow;
+    max-width: 1380px !important;
+    margin-top: 30px;
+    padding: 0 !important;
+}
 .sectionTitle{
     font-family: Montserrat-ExtraBold;
 
