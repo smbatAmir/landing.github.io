@@ -8,40 +8,39 @@ import Fade from 'react-reveal/Fade';
 import Layout from "../components/layout";
 import Sidebar from "../components/sidebar";
 
-var faqArray = [
-    {
-        id:1,
-        title:'Thi is sample text 1',
-        description:'1Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        text:'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-    },
-    {
-        id:2,
-        title:'Thi is sample text 2',
-        description:'2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        text:'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-    },
-    {
-        id:3,
-        title:'Thi is sample text 3',
-        description:'3Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        text:'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-    },
-    {
-        id:4,
-        title:'Thi is sample text 4',
-        description:'2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        text:'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-    },
-    {
-        id:5,
-        title:'Thi is sample text 5',
-        description:'2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        text:'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-    }]
-console.log(faqArray)
+// var faqArray = [
+//     {
+//         id: 1,
+//         title: 'Thi is sample text 1',
+//         description: '1Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+//         text: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+//     },
+//     {
+//         id: 2,
+//         title: 'Thi is sample text 2',
+//         description: '2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+//         text: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+//     },
+//     {
+//         id: 3,
+//         title: 'Thi is sample text 3',
+//         description: '3Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+//         text: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+//     },
+//     {
+//         id: 4,
+//         title: 'Thi is sample text 4',
+//         description: '2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+//         text: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+//     },
+//     {
+//         id: 5,
+//         title: 'Thi is sample text 5',
+//         description: '2Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+//         text: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+//     }]
 
-export default function FAQ() {
+export default function FAQ({allFaq}) {
     const faqBG = {
         padding: '50px',
         backgroundImage: 'url("sectionImages/faqBG.png")',
@@ -49,26 +48,26 @@ export default function FAQ() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         minHeight: '490px'
-
     }
+
     return (
-
         <Container id="faq">
-            <h2 className={styles.sectionTitle}>FAQ</h2>
-
-            <Grid container >
+            <h2 className={styles.sectionTitle}>FAQ's</h2>
+            <Grid container>
                 <Flip bottom>
-
                     <Grid column item md={12} spacing={3} style={faqBG}>
                         <Fade right delay={500}>
                             <div className={styles.faqArea}>
-                                {faqArray.map((faq) => (
+                                {console.log("allFaq________________", allFaq)}
+
+                                {allFaq.map((faq) => (
                                     // eslint-disable-next-line react/jsx-no-undef
-                                    <SingleFaq key={faq.id}
+                                    <SingleFaq key={faq._id}
+                                               allFaq={allFaq}
                                                id={faq.id}
-                                               title = {faq.title}
-                                               description = {faq.description}
-                                               text = {faq.text}
+                                               title={faq.title}
+                                               text={faq.text}
+                                               thumbnailUrl={faq.thumbnailUrl}
                                     />
                                 ))}
                             </div>
@@ -78,7 +77,6 @@ export default function FAQ() {
                 <Grid column item md={4} spacing={3}>
                     {/*<Image  src={section1RightBar} alt="Picture of the author" />*/}
                 </Grid>
-
             </Grid>
         </Container>
     )
@@ -87,9 +85,23 @@ export default function FAQ() {
 FAQ.getLayout = function getLayout(page) {
     return (
         <Layout>
-            <Sidebar />
+            <Sidebar/>
             {page}
 
         </Layout>
     )
+}
+
+
+export async function getStaticProps() {
+    const allFaq = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Faq")
+        .then(
+            (res) => res.json()
+        );
+
+    return {
+        props: {
+            allFaq: allFaq.banners
+        }
+    }
 }

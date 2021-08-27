@@ -1,13 +1,13 @@
 import React from "react";
-
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import styles from './../sectionFAQ.module.css'
+import Image from 'next/image'
 
-import {Container, Grid} from "@material-ui/core";
+// import styles from './../sectionFAQ.module.css'
+// import {Container, Grid} from "@material-ui/core";
 
 const Accordion = withStyles({
     root: {
@@ -49,7 +49,7 @@ const AccordionDetails = withStyles((theme) => ({
     },
 }))(MuiAccordionDetails);
 
-export default function SingleFaq({id, title, description, text}) {
+export default function SingleFaq({id, title, text, thumbnailUrl}) {
     const [expanded, setExpanded] = React.useState('panel1');
 
     const handleChange = (panel) => (event, newExpanded) => {
@@ -63,22 +63,21 @@ export default function SingleFaq({id, title, description, text}) {
         fontSize: '18px',
         color: '#FF6600'
     }
+
     return (
-
-                // <Grid column item sm={6} spacing={3} className={styles.faqArea}>
-                        <Accordion square expanded={expanded === `panel${id}`} onChange={handleChange(`panel${id}`)}>
-                            <AccordionSummary aria-controls={`panel${id}d-content`} id={`panel${id}d-content`}>
-                                <Typography style={TitleText}>{title}</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography style={descText}>
-                                    {description}
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                // </Grid>
-
-
-
+        // <Grid column item sm={6} spacing={3} className={styles.faqArea}>
+        <Accordion square expanded={expanded === `panel${id}`} onChange={handleChange(`panel${id}`)}>
+            <AccordionSummary aria-controls={`panel${id}d-content`} id={`panel${id}d-content`}>
+                <Typography style={TitleText}>{title ? title : "Faq title here"}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography style={descText}>
+                    {text ? text : "Faq text here, please edit and add text"}
+                    <img src={thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${thumbnailUrl}` : ""} alt=""/>
+                    {/*<Image src={thumbnailUrl ? thumbnailUrl : ""} layout="fill"/>*/}
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
+        // </Grid>
     );
 }

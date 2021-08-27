@@ -4,6 +4,7 @@
 .singleBenefitsImages{
     border-radius: 16px;
     width: 100%;
+    border: 1px solid;
 }
 .singleBenefitsTitle{
     font-size: 22px;

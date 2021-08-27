@@ -7,7 +7,7 @@ import styles from "../../styles/News.module.css";
 import Link from "next/link";
 
 export default function News({allNews}) {
-    console.log("allNews 101______________________", allNews);
+    // console.log("allNews______________________", allNews);
 
     return (
         <div style={{background: '#FFF6F0'}}>
@@ -23,7 +23,7 @@ export default function News({allNews}) {
                       spacing={3}
                 >
                     {allNews?.map((news) => (
-                        <Link key={news.id} href="/news/[id]" as={`/news/${news.id}`}>
+                        <Link  href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
                             <a>
                                 <strong>{news.title ? news.title: "News Title Here"}</strong>
                             </a>
