@@ -6,7 +6,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import {AiFillCheckCircle} from "@react-icons/all-files/ai/AiFillCheckCircle";
-import styles from './../components/join.module.css'
+import styles from '../styles/join.module.css'
 // import bgImages from '../public/sectionImages/joinBG.png'
 import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';

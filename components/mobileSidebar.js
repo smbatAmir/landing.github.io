@@ -10,7 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import {GiHamburgerMenu} from "@react-icons/all-files/gi/GiHamburgerMenu";
 import Link from "next/link";
-import styles from "./sidebar.module.css";
+import styles from "../styles/sidebar.module.css";
 import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles({

@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from '../../components/layout'
 import Sidebar from '../../components/sidebar'
 import Container from "@material-ui/core/Container/index";
 import {Grid} from "@material-ui/core/index";
 import styles from "../../styles/News.module.css";
 import Link from "next/link";
+import AOS from "aos";
 
 export default function News({allNews}) {
-    // console.log("allNews______________________", allNews);
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, [])
+
+    console.log("allNews______________________", allNews);
 
     return (
         <div style={{background: '#FFF6F0'}}>
@@ -18,16 +23,22 @@ export default function News({allNews}) {
                     </Grid>
                 </Grid>
 
-                <Grid container lg={12} md={12} sm={12} xs={12}
-                      className={styles.newsContainer}
-                      spacing={3}
-                >
-                    {allNews?.map((news) => (
-                        <Link  href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
-                            <a>
-                                <strong>{news.title ? news.title: "News Title Here"}</strong>
-                            </a>
-                        </Link>
+                <Grid container lg={12} md={12} sm={12} xs={12} className={styles.newsContainer} spacing={3}>
+                    {allNews?.map((news, idx) => (
+                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"}>
+                            <Link href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
+                                <a>
+                                    <h1>{news.title ? news.title : "News Title Here"}</h1>
+                                    <p className={styles.singleNewsData}>Posted on: <span>{news.createdAt}</span></p>
+
+                                    <img className={styles.singleBenefitsImages}
+                                         src={news.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}` : ""}
+                                         alt=""
+                                    />
+                                    <p>{news.text}</p>
+                                </a>
+                            </Link>
+                        </div>
                     ))}
                 </Grid>
 
@@ -52,7 +63,6 @@ News.getLayout = function getLayout(page) {
         </Layout>
     )
 }
-
 
 export async function getStaticProps() {
     const allNews = await fetch("https://api-settings.uraaa.com/banners/all?settingName=News")

@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Benefits({allBenefit}) {
     console.log("allBenefit_______________", allBenefit)
+
     return (
         <Container>
             <Grid container>
@@ -21,10 +22,9 @@ export default function Benefits({allBenefit}) {
                         <div className={styles.singleBenefits}>
                             <Link href={`/benefit/${benefit._id}`} as={`/benefit/${benefit._id}`} key={benefit._id}>
                                 <a className={styles.cartHref}>
-                                    {/*<img className={styles.singleBenefitsImages}*/}
-                                    {/*     src={benefit.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${thumbnailUrl}` : ""} alt=""/>*/}
+                                    <img className={styles.singleBenefitsImages}
+                                         src={benefit.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${benefit.thumbnailUrl}` : ""} alt=""/>
                                     <h4 className={styles.singleBenefitsTitle}>{benefit.title}</h4>
-                                    <p>{benefit.text}</p>
                                 </a>
                             </Link>
                         </div>
@@ -41,7 +41,6 @@ Benefits.getLayout = function getLayout(page) {
         <Layout>
             <Sidebar/>
             {page}
-
         </Layout>
     )
 }

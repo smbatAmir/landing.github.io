@@ -1,4 +1,4 @@
-import styles from './footer.module.css'
+import styles from '../styles/footer.module.css'
 import Image from "next/image";
 import section1RightBar from "../public/sectionImages/hero_section_guy.png";
 import {Container, Grid} from "@material-ui/core";

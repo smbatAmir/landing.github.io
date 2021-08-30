@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './sidebar.module.css'
+import styles from '../styles/sidebar.module.css'
 import {Container, Grid} from "@material-ui/core";
 import logo from "../public/ura_logo_main.png";
 import Link from "next/link";

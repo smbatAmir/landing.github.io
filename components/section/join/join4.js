@@ -1,5 +1,5 @@
 import {Container, Fab, FormControlLabel, Grid, Radio, RadioGroup} from "@material-ui/core";
-import styles from "../../join.module.css";
+import styles from "../../../styles/join.module.css";
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import {createTheme, makeStyles, ThemeProvider} from "@material-ui/core/styles";
