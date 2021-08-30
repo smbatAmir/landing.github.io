@@ -9,7 +9,7 @@ import {BsArrowLeft} from "@react-icons/all-files/bs/BsArrowLeft";
 
 export default function BenefitsId({benefitItem}) {
     const item = benefitItem.banners[0];
-    console.log("benefitItem_____________________", item);
+    // console.log("benefitItem__________", item);
 
     return (
         <div style={{background: '#FFF6F0', paddingBottom: '10%'}}>

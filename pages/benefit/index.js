@@ -6,7 +6,7 @@ import Sidebar from "../../components/sidebar";
 import Link from "next/link";
 
 export default function Benefits({allBenefit}) {
-    console.log("allBenefit_______________", allBenefit)
+    // console.log("allBenefit_______________", allBenefit)
 
     return (
         <Container>

@@ -10,7 +10,7 @@ import AOS from "aos";
 
 export default function NewsId({newsItem}) {
     const item = newsItem.banners[0];
-    console.log("______________________________________", newsItem)
+    // console.log("newsItem__________", newsItem)
 
     return (
         <div style={{background: '#FFF6F0', paddingBottom: '10%'}}>

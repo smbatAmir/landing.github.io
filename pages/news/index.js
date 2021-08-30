@@ -12,7 +12,7 @@ export default function News({allNews}) {
         AOS.init({duration: 2000});
     }, [])
 
-    console.log("allNews______________________", allNews);
+    // console.log("allNews______________________", allNews);
 
     return (
         <div style={{background: '#FFF6F0'}}>

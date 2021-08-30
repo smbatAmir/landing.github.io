@@ -7,12 +7,15 @@ import Section4 from "../components/section/section4";
 import Selling from "../components/section/sectionSelling";
 import Section5 from "../components/section/section5";
 
-export default function Index() {
+export default function Home({homeData}) {
+    const item = homeData;
+    console.log("homeAllData______________________", homeData);
+
     return (
         <>
-            <Section1/>
-            <Section3/>
-            <Section4/>
+            <Section1 homeData={item[0]}/>
+            <Section3 homeData={item[1]}/>
+            <Section4 homeData={item[2]}/>
             <Section5/>
             <Section2/>
             <Selling/>
@@ -20,7 +23,7 @@ export default function Index() {
     )
 }
 
-Index.getLayout = function getLayout(page) {
+Home.getLayout = function getLayout(page) {
     return (
         <Layout>
             <Sidebar/>
@@ -28,3 +31,27 @@ Index.getLayout = function getLayout(page) {
         </Layout>
     )
 }
+
+// export async function getStaticProps() {
+//     const homeData = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Home")
+//         .then(
+//             (res) => res.json()
+//         );
+//
+//     return {
+//         props: {
+//             homeData: homeData.banners
+//         }
+//     }
+// }
+
+export const getServerSideProps = async (context) => {
+    const res = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Home");
+    const homeData = await res.json();
+
+    return {
+        props: {
+            homeData: homeData.banners,
+        },
+    };
+};

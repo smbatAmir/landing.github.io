@@ -2,23 +2,28 @@ import styles from './section1.module.css'
 import Image from "next/image";
 import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
 import {Container, Grid} from "@material-ui/core";
-import {FiPlay} from "@react-icons/all-files/fi/FiPlay";
-import VideoMoadal from "./modalVideo";
+// import {FiPlay} from "@react-icons/all-files/fi/FiPlay";
+// import VideoMoadal from "./modalVideo";
 import TransitionsModal from "./modalVideo";
 import {IoClose} from "@react-icons/all-files/io5/IoClose";
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import ReactPlayer from "react-player"; // You can also use <link> for styles
 
-export default function Section1() {
+// import ReactPlayer from "react-player"; // You can also use <link> for styles
+
+
+export default function Section1({homeData}) {
+    console.log("homeData__0 ______________________", homeData);
+
     const videoPosition = {
         position: 'absolute',
     }
     useEffect(() => {
         AOS.init({duration: 2000});
     }, [])
+
     const img = {
         position: 'relative'
     }
@@ -30,12 +35,18 @@ export default function Section1() {
     const [clickOpen, setclickOpen] = useState({display: 'none'});
 
     const openModal = (event) => {
+        if (homeData.text.length > 200)
         event.preventDefault();
         setclickOpen({display: 'block'})
     }
     const closeModal = (event) => {
         event.preventDefault();
         setclickOpen({display: 'none'})
+    }
+
+    //backend InnerHTML data decode text
+    const createMarkup = () => {
+        return {__html: homeData.text}
     }
 
     return (
@@ -46,13 +57,14 @@ export default function Section1() {
                         <h2 className={styles.sectionTitle}>Sell More with Desired Prices & </h2>
                         <h3 className={styles.sectionSubTitle}> Make More Money!</h3>
                         <div>
-                            <h4 className={styles.textTitle}>What is Uraaa ?</h4>
-                            <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
-                                random text. It has roots in a piece of classical Latin literature from 45 BC, making it
-                                over 2000 years old.
-                                Contrary to popular belief to popular belief, Lorem Ipsum is not simply random
-                                text. <span className={styles.rm} onClick={openModal}>Read more</span>
-                            </p>
+                            <h4 className={styles.textTitle}>{homeData.title}</h4>
+
+                            {/*don't work reload time____________________________*/}
+                            <p>{homeData.text}</p>
+                            <p dangerouslySetInnerHTML={createMarkup()}/>
+
+
+                            <span className={styles.rm} onClick={openModal}>Read more</span>
                             <div>
                                 <Link href="/joinurrra">
                                     <a className={styles.joinButton}> Join & Get 30% off</a>
@@ -85,10 +97,14 @@ export default function Section1() {
             <Grid column item lg={12} md={12} sm={12} xs={12} spacing={3}>
                 <div style={clickOpen} className={styles.secondSee}>
                     <div className={styles.secondSeeTitle}>
-                        <h4 className={styles.textTitle}>What is Uraaa ?</h4>
+                        <h4 className={styles.textTitle}>{homeData.title}</h4>
                         <IoClose className={styles.closeModalIcon} onClick={closeModal}/>
                     </div>
+
                     <div>
+                        {/*don't work________________________________________*/}
+                        {/*<p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>*/}
+
                         <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
                             random
                             text. It has roots in a piece of classical Latin literature from 45 BC, making it over
@@ -107,6 +123,7 @@ export default function Section1() {
                             Contrary to popular belief, Lorem Ipsum is not simply random text.
                         </p>
                     </div>
+
                     <div className={styles.joinButtonArea}>
                         <Link href="/joinurrra">
                             <a className={styles.joinButton}> Join Uraaa!</a>
