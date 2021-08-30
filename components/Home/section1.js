@@ -1,18 +1,13 @@
-import styles from './section1.module.css'
+import React, {useEffect, useState} from "react";
+import styles from '../../styles/section1.module.css'
 import Image from "next/image";
 import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
-import {Container, Grid} from "@material-ui/core";
-// import {FiPlay} from "@react-icons/all-files/fi/FiPlay";
-// import VideoMoadal from "./modalVideo";
-import TransitionsModal from "./modalVideo";
+import {Container, Grid} from "@material-ui/core/index";
+import TransitionsModal from "../section/modalVideo";
 import {IoClose} from "@react-icons/all-files/io5/IoClose";
-import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-// import ReactPlayer from "react-player"; // You can also use <link> for styles
-
 
 export default function Section1({homeData}) {
     console.log("homeData__0 ______________________", homeData);
@@ -24,18 +19,9 @@ export default function Section1({homeData}) {
         AOS.init({duration: 2000});
     }, [])
 
-    const img = {
-        position: 'relative'
-    }
-    const vid = {
-        position: 'absolute',
-        right: '155px',
-        top: '281px',
-    }
     const [clickOpen, setclickOpen] = useState({display: 'none'});
 
     const openModal = (event) => {
-        if (homeData.text.length > 200)
         event.preventDefault();
         setclickOpen({display: 'block'})
     }
@@ -59,12 +45,21 @@ export default function Section1({homeData}) {
                         <div>
                             <h4 className={styles.textTitle}>{homeData.title}</h4>
 
-                            {/*don't work reload time____________________________*/}
-                            <p>{homeData.text}</p>
-                            <p dangerouslySetInnerHTML={createMarkup()}/>
 
+                            {/*don't work reload time___________________________*/}
+                            {/*if text characters length greater than 100, add read more button*/}
+                            {
+                                homeData.text.length > 150 ?
+                                    <div className={styles.textDescription}>
+                                        <span>{homeData.text.slice(0,150)} </span>
+                                        {/*<span dangerouslySetInnerHTML={createMarkup()} className={styles.textDescription}/>*/}
 
-                            <span className={styles.rm} onClick={openModal}>Read more</span>
+                                        <span className={styles.rm} onClick={openModal}> Read more</span>
+                                    </div>
+                                    :
+                                    <p>{homeData.text}</p>
+                            }
+
                             <div>
                                 <Link href="/joinurrra">
                                     <a className={styles.joinButton}> Join & Get 30% off</a>
@@ -83,7 +78,7 @@ export default function Section1({homeData}) {
                             <h3>Watch this video to learn more:</h3>
                         </div>
 
-                        <Image src={section1RightBar} alt="Picture of the author" style={img}/>
+                        <Image src={section1RightBar} alt="Picture of the author"/>
 
                         {/*<div style={test}>*/}
                         {/*    <ReactPlayer className={styles.videoArea} width='150px' url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />*/}
@@ -103,25 +98,8 @@ export default function Section1({homeData}) {
 
                     <div>
                         {/*don't work________________________________________*/}
-                        {/*<p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>*/}
-
-                        <p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply
-                            random
-                            text. It has roots in a piece of classical Latin literature from 45 BC, making it over
-                            2000
-                            years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular
-                            belief,
-                            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                            literature
-                            from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text.Contrary to popular
-                            belief,
-                            Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                            literature
-                            from 45 BC, making it over 2000 years old.
-                            Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        </p>
+                        <p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>
+                        <p>{homeData.text}</p>
                     </div>
 
                     <div className={styles.joinButtonArea}>

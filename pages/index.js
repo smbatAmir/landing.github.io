@@ -1,8 +1,9 @@
+import React from "react";
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
-import Section1 from "../components/section/section1";
+import Section1 from "../components/Home/section1";
 import Section2 from "../components/section/section2";
-import Section3 from "../components/section/section3";
+import Section3 from "../components/Home/section3";
 import Section4 from "../components/section/section4";
 import Selling from "../components/section/sectionSelling";
 import Section5 from "../components/section/section5";
@@ -32,26 +33,15 @@ Home.getLayout = function getLayout(page) {
     )
 }
 
-// export async function getStaticProps() {
-//     const homeData = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Home")
-//         .then(
-//             (res) => res.json()
-//         );
-//
-//     return {
-//         props: {
-//             homeData: homeData.banners
-//         }
-//     }
-// }
-
-export const getServerSideProps = async (context) => {
-    const res = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Home");
-    const homeData = await res.json();
+export async function getStaticProps() {
+    const homeData = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Home")
+        .then(
+            (res) => res.json()
+        );
 
     return {
         props: {
-            homeData: homeData.banners,
-        },
-    };
-};
+            homeData: homeData.banners
+        }
+    }
+}

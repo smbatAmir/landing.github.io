@@ -12,7 +12,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import { green } from '@material-ui/core/colors';
 import {TextareaAutosize} from "@material-ui/core";
-import styles from "../section1.module.css";
+import styles from "../../../styles/section1.module.css";
 import {AiOutlineSend} from "@react-icons/all-files/ai/AiOutlineSend";
 
 const CssTextField = withStyles({

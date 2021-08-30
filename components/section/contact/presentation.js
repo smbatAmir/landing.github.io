@@ -13,7 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { green } from '@material-ui/core/colors';
 import {Grid, TextareaAutosize} from "@material-ui/core";
 import {AiOutlineExclamationCircle} from "@react-icons/all-files/ai/AiOutlineExclamationCircle";
-import styles from "../section1.module.css";
+import styles from "../../../styles/section1.module.css";
 import {AiOutlineSend} from "@react-icons/all-files/ai/AiOutlineSend";
 
 const CssTextField = withStyles({
