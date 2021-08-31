@@ -11,10 +11,11 @@ export default function SingleSelling({id,icon, question, answer, delay}) {
     useEffect(() => {
         AOS.init({duration: 2000});
     }, [])
+
     const itemsStyles = {
         width: '100%'
-
     }
+
     const [count, setCount] = useState();
     const [myClick, setmyClick] = useState(true);
     const [asnwerVal, setasnwerVal] = useState({display: 'none'});
@@ -24,12 +25,10 @@ export default function SingleSelling({id,icon, question, answer, delay}) {
     const [clickId, setclickId] = useState();
 
     const handleClick = (event) => {
-
         event.preventDefault();
         if (myClick == false) {
             setmyClick(true)
             setclickId(false);
-
         } else {
             setmyClick(false)
             setclickId(true);
@@ -40,17 +39,13 @@ export default function SingleSelling({id,icon, question, answer, delay}) {
             setclickmeVal({display: 'none'})
             seticonColor({color: '#FFF'})
             setquestionVal({color:'#FFAF7A'})
-
         } else {
             setCount({backgroundColor: '#fff'})
             setasnwerVal({display: 'none'})
             setclickmeVal({display: 'inline-block'})
             seticonColor({color: '#FF6600'})
             setquestionVal({color:'#272744'})
-
-
         }
-
     };
 
         return (
