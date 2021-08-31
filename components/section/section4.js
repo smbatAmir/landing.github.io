@@ -22,7 +22,7 @@ export default function Section4({homeData}) {
 
                         <p>{homeData.text}</p>
 
-                        <p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>
+                        {/*<p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>*/}
 
                         {/*<p className={styles.textDescription}>Contrary to popular belief, Lorem Ipsum is not simply*/}
                         {/*    random text. It has roots in a piece of classical Latin literature from 45 BC, making it*/}
