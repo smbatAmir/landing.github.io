@@ -98,7 +98,7 @@ export default function Section1({homeData}) {
 
                     <div>
                         {/*don't work________________________________________*/}
-                        <p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>
+                        {/*<p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>*/}
                         <p>{homeData.text}</p>
                     </div>
 
