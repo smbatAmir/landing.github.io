@@ -1,67 +1,111 @@
-.sectionTitle{
-    font-family: Montserrat-ExtraBold;
+.section5Container {
+    border: 1px solid red;
+    max-width: 1380px !important;
+    margin-top: 30px;
+    padding: 0 0 70px !important;
+    position: relative;
+}
 
+.sectionTitle, .sectionSubTitle {
+    font-family: Montserrat-ExtraBold;
     padding: 0;
     font-style: normal;
     font-size: 48px;
     color: #272744;
-    margin:0;
-
+    margin: 0;
+    font-weight: 800;
 }
-.sectionSubTitle{
-    font-family: Montserrat-ExtraBold;
 
-    padding: 0;
-
-    font-style: normal;
-    font-size: 48px;
+.sectionSubTitle {
     color: #FF6600;
-    margin:0;
-
 }
 
-.sectionTitle2{
-    font-family: Montserrat-SemiBold;
-
-    padding: 100px 0 0 120px;
-    font-style: normal;
-    font-size: 48px;
-    color: #272744;
-    margin:0;
-
+.sectiongraph {
+    position: relative;
+    top: -30px;
 }
-.sectionSubTitle2{
-    font-family: Montserrat-SemiBold;
 
-    font-style: normal;
-    font-size: 48px;
-    color: #FF6600;
-    margin:0;
-
-}
-.endColum{
-    margin-top: -180px;
-}
-.colTitle{
+.colTitle {
     font-size: 24px;
     color: #272744;
     font-weight: 800;
-
-}
-.colTitle span{
-    color: #FF6600;
-}
-.listCol li::marker{
-    color: #FF6600;
-
 }
 
-.listCol li{
+.listColWraper > div {
+    padding-left: 20px;
+}
+
+.listCol {
+    padding: 0 25px;
+    margin: 16px 0;
+}
+
+.listCol li {
     color: #272744;
     font-size: 18px;
     font-weight: bold;
 }
-.backCircle{
+
+.listCol li::marker {
+    color: #FF6600;
+    font-size: 20px;
+}
+
+.section5Button {
+    padding: 15px 45px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FF6600;
+    border: 2px solid #FF6600;
+    box-sizing: border-box;
+    border-radius: 32px;
+    background: white;
+    margin-top: 30px;
+}
+
+.sectionTitle2, .sectionSubTitle2 {
+    font-family: Montserrat-SemiBold;
+    font-style: normal;
+    font-size: 48px;
+    color: #272744;
+    font-weight: 800;
+    line-height: 68px;
+    margin: 100px 135px;
+    width: 680px;
+}
+
+.sectionSubTitle2 {
+    color: #FF6600;
+    margin: 0;
+}
+
+.backImages {
+    position: relative !important;
+    top: -180px !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.endColum {
+    margin-top: -180px;
+}
+
+.colTitle span {
+    color: #FF6600;
+}
+
+.backCircle {
     position: absolute;
     width: 250px;
     height: 250px;
@@ -70,7 +114,8 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
     top: 800px;
 }
-.backArea{
+
+.backArea {
     z-index: 5;
     background-image: url('../../public/sectionImages/backArea.png');
     background-repeat: no-repeat;
@@ -79,9 +124,4 @@
     height: 450px;
     position: relative;
 }
-.backImages{
-    position: relative!important;
-    top: -240px!important;
-    margin: 0;
-    padding:0 ;
-}
+

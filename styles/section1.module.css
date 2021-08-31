@@ -36,11 +36,20 @@
     font-family: Montserrat-SemiBold;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 18px !important;
+    line-height: 30px !important;
     color: #272744;
     margin: 16px 0 40px;
     width: 500px;
+}
+
+.textDescription > p {
+    display: contents;
+}
+
+.textDescription > p > span {
+    font-size: 18px !important;
+    line-height: 30px !important;
 }
 
 .textDescription span:last-child {
@@ -149,7 +158,6 @@
 .border {
     border: 1px solid red;
 }
-
 
 
 @media (max-width: 980px) {

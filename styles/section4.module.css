@@ -1,0 +1,40 @@
+.section4Container {
+    border: 1px solid greenyellow;
+    max-width: 1380px !important;
+    margin-top: 30px;
+    padding: 0 !important;
+}
+
+.textTitle {
+    font-family: Montserrat-ExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    color: #272744;
+    margin: 60px 0 16px;
+}
+
+.textDescription, .watchVideoText {
+    font-family: Montserrat-SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #272744;
+    width: 500px;
+}
+
+.textDescription > p > span {
+    font-size: 18px !important;
+    line-height: 30px !important;
+}
+
+.watchVideoWraper {
+    display: flex;
+    align-items: center;
+}
+
+.watchVideoText {
+    margin-left: 16px;
+}

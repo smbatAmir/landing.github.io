@@ -8,6 +8,8 @@ import {IoClose} from "@react-icons/all-files/io5/IoClose";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+const HtmlToReactParser = require('html-to-react').Parser;
+const htmlToReactParser = new HtmlToReactParser();
 
 export default function Section1({homeData}) {
     console.log("homeData__0 ______________________", homeData);
@@ -45,15 +47,11 @@ export default function Section1({homeData}) {
                         <div>
                             <h4 className={styles.textTitle}>{homeData.title}</h4>
 
-
-                            {/*don't work reload time___________________________*/}
                             {/*if text characters length greater than 100, add read more button*/}
                             {
                                 homeData.text.length > 150 ?
                                     <div className={styles.textDescription}>
-                                        <span>{homeData.text.slice(0,150)} </span>
-                                        {/*<span dangerouslySetInnerHTML={createMarkup()} className={styles.textDescription}/>*/}
-
+                                        <span className={styles.textDescription}>{(htmlToReactParser.parse(homeData.text)).slice(0,150)}</span>
                                         <span className={styles.rm} onClick={openModal}> Read more</span>
                                     </div>
                                     :

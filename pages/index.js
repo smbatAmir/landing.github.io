@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar'
 import Section1 from "../components/Home/section1";
 import Section2 from "../components/section/section2";
 import Section3 from "../components/Home/section3";
-import Section4 from "../components/section/section4";
+import Section4 from "../components/Home/section4";
 import Selling from "../components/section/sectionSelling";
 import Section5 from "../components/section/section5";
 
