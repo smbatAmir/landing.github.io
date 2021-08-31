@@ -3,7 +3,6 @@ import styles from './section5.module.css'
 import Image from "next/image";
 import {Container, Grid} from "@material-ui/core";
 import manImages from "../../public/sectionImages/manImages.png";
-// import Link from "next/link";
 
 export default function Section5() {
     return (

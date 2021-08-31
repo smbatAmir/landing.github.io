@@ -1,56 +1,66 @@
-.sectionTitle{
+.section2Container {
+    border: 1px solid red;
+    max-width: 1380px !important;
+    margin-top: 100px;
+    padding: 0 !important;
+}
+
+.sectionTitle {
     font-family: Montserrat-ExtraBold;
-
     font-style: normal;
-    /*font-weight: 800;*/
-    font-size: 48px;
+    font-weight: 800;
+    font-size: 32px;
     color: #272744;
+    line-height: 39px;
+    width: 420px;
+    margin-bottom: 50px;
 }
 
-
-.textDescription{
-    font-family: Montserrat-Bold;
-
-    font-style: normal;
-    /*font-weight: 600;*/
-    font-size: 18px;
-    /*line-height: 30px;*/
-    color: #272744;
-
-}
-.line{
-    width: 45%;
-    height: 2px;
-    background-color: #FF6600;
-}
-.storeIconInfo{
+.storeIconInfo {
     font-size: 16px;
     text-transform: capitalize;
     color: #AFAFC0;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 24px 0 8px;
 }
-.storeIcon{
-    padding: 10px 15px;
+
+.storeIcon {
+    padding: 10px 15px 5px;
     width: fit-content;
     background: #272744;
-    box-shadow: 0px 8px 12px rgba(184, 54, 0, 0.15);
+    box-shadow: 0 8px 12px rgba(184, 54, 0, 0.15);
     border-radius: 8px;
 }
-.WebSitestext{
+
+.webSitesIconArea > div{
+    background: #fff;
+    box-shadow: 0px 8px 12px rgba(184, 54, 0, 0.15);
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.WebSitestext {
     font-size: 18px;
     color: #7C7C9E;
     margin: 0;
     padding: 0;
+    font-weight: 600;
 }
-.brIcon{
+
+.brIcon {
     width: 134px;
     height: 40px;
     background: #FFFFFF;
     box-shadow: 0px 8px 12px rgba(184, 54, 0, 0.15);
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.webSitesIconArea{
 
-    background: #FFFFFF;
-    box-shadow: 0px 8px 12px rgba(184, 54, 0, 0.15);
-    border-radius: 8px;
-}
+
