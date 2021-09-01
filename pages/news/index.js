@@ -32,12 +32,12 @@ export default function News({allNews}) {
                                     <h1>{news.title ? news.title : "News Title Here"}</h1>
                                     <p className={styles.singleNewsData}>Posted on: <span>{news.createdAt}</span></p>
 
-                                    <Image className={styles.singleBenefitsImages}
-                                         src={news.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}` : ""}
-                                         alt=""
-                                         width={500}
-                                         height={500}
-                                    />
+                                    {/*<img className={styles.singleBenefitsImages}*/}
+                                    {/*     src={news.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}` : ""}*/}
+                                    {/*     alt=""*/}
+                                    {/*     width={500}*/}
+                                    {/*     height={500}*/}
+                                    {/*/>*/}
                                     <p>{news.text}</p>
                                 </a>
                             </Link>

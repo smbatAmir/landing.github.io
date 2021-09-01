@@ -1,0 +1,103 @@
+.benefitsContainer {
+    max-width: 1380px !important;
+    margin-top: 30px;
+    padding: 0 !important;
+    margin-bottom: 200px;
+}
+
+.textTitle {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+    color: #272744;
+    margin: 40px 0 70px;
+}
+
+.benefitsCard {
+    padding-right: 30px;
+}
+
+.singleBenefits {
+    background: #ffffff;
+    border-radius: 24px;
+    width: 320px;
+    height: 420px;
+    padding: 15px 15px 35px;
+    box-sizing: border-box;
+    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.12);
+    margin-bottom: 50px;
+}
+
+.cartHref {
+    text-decoration: none;
+}
+
+.singleBenefitsImages {
+    border-radius: 16px;
+    width: 100%;
+    border: 1px solid;
+}
+
+.singleBenefitsTitle {
+    font-size: 20px;
+    line-height: 28px;
+    color: #272744;
+    font-weight: bold;
+    margin: 35px 0;
+}
+
+
+/*[id] style*/
+.benefitsSingleContainer {
+    background: #FFF6F0;
+}
+
+.benefitsSingleContainer > div {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 0 200px;
+}
+
+.BackItemsArea {
+}
+
+.BackItems {
+    color: #272744;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    padding: 70px 0;
+    align-items: center;
+}
+
+.BackItems > svg {
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.benefitsSingleItmeArea {
+    background-color: #fff;
+    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
+    border-radius: 32px;
+    padding: 50px;
+    margin: 0 !important;
+}
+
+.benefitsSingleItemTItleAndData:last-child {
+    padding-left: 50px;
+}
+
+.benefitsSingleItemsTitle {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    color: #272744;
+}
+
+.benefitsSingleItemsText {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #272744;
+}
