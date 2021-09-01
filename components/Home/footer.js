@@ -17,6 +17,7 @@ export default function Footer() {
                 <Grid container>
                     <Grid column item lg={4} md={4} sm={12} xs={12}>
                         <Grid>
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="74" height="46" viewBox="0 0 74 46"
                                  fill="none">
                                 <path
