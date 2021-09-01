@@ -2,11 +2,11 @@ import React from "react";
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
 import Section1 from "../components/Home/section1";
-import Section2 from "../components/section/section2";
+import Section2 from "../components/Home/section2";
 import Section3 from "../components/Home/section3";
 import Section4 from "../components/Home/section4";
-import Selling from "../components/section/sectionSelling";
-import Section5 from "../components/section/section5";
+import Selling from "../components/Home/sell/sectionSelling";
+import Section5 from "../components/Home/section5";
 
 export default function Home({homeData}) {
     const item = homeData;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import styles from './../sectionSelling.module.css'
+import styles from '../../../styles/sectionSelling.module.css'
 import Link from "next/link";
 import {useEffect, useState} from 'react'
-import {Grid} from "@material-ui/core";
+import {Grid} from "@material-ui/core/index";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 

@@ -1,10 +1,10 @@
-import styles from './sectionSelling.module.css'
-import SingleSelling from "./sell/singleSell";
+import styles from '../../../styles/sectionSelling.module.css'
+import SingleSelling from "./singleSell";
 import Link from 'next/link'
 import {BiRocket} from 'react-icons/bi';
 import {BsBarChart} from 'react-icons/bs';
 import {FiTrendingUp} from 'react-icons/fi';
-import {Container, Grid} from "@material-ui/core";
+import {Container, Grid} from "@material-ui/core/index";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from "react";

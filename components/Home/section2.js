@@ -1,4 +1,4 @@
-import styles from './section2.module.css'
+import styles from '../../styles/section2.module.css'
 import Image from "next/image";
 import section2leftbar from "../../public/sectionImages/cross_platform_devices.png";
 import appStore from "../../public/sectionImages/appStore.png";
@@ -6,7 +6,7 @@ import googleStore from "../../public/sectionImages/googleStore.png";
 import webSites from "../../public/sectionImages/website.png";
 import ChromeWtext from "../../public/sectionImages/ChromWtext.png";
 import SafariWtext from "../../public/sectionImages/SafariWtext.png";
-import {Container, Grid} from "@material-ui/core";
+import {Container, Grid} from "@material-ui/core/index";
 import React from 'react';
 
 export default function Section2() {

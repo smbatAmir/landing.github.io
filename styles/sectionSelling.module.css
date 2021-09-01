@@ -6,7 +6,7 @@
 
 .backArea {
     z-index: 5;
-    background-image: url('../../public/sectionImages/Rectangle425.png');
+    background-image: url('../public/sectionImages/Rectangle425.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -33,6 +33,7 @@
     display: inline-block;
     font-weight: bold;
     margin: 16px 0 66px;
+    padding-right: 40px;
 }
 
 .singleSell {
@@ -99,7 +100,8 @@
     border-radius: 32px;
     text-decoration: none;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    font-size: 16px;
 }
 
 .answeVal {

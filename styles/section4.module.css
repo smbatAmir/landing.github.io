@@ -28,6 +28,7 @@
 .textDescription > p > span {
     font-size: 18px !important;
     line-height: 30px !important;
+    background: none !important;
 }
 
 .watchVideoWraper {

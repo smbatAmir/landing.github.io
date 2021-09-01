@@ -107,7 +107,7 @@
 
 .backArea {
     z-index: 5;
-    background-image: url('../../public/sectionImages/backArea.png');
+    background-image: url('../public/sectionImages/backArea.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;

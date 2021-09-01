@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './section5.module.css'
+import styles from '../../styles/section5.module.css'
 import Image from "next/image";
-import {Container, Grid} from "@material-ui/core";
+import {Container, Grid} from "@material-ui/core/index";
 import manImages from "../../public/sectionImages/manImages.png";
 
 export default function Section5() {

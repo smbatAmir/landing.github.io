@@ -1,12 +1,12 @@
-import styles from '../styles/footer.module.css'
+import styles from '../../styles/footer.module.css'
 import Image from "next/image";
-import section1RightBar from "../public/sectionImages/hero_section_guy.png";
-import {Container, Grid} from "@material-ui/core";
+import section1RightBar from "../../public/sectionImages/hero_section_guy.png";
+import {Container, Grid} from "@material-ui/core/index";
 import Link from "next/link";
- import chromeImg from '../public/sectionImages/chromFooter.png'
- import safariImg from '../public/sectionImages/safariFooter.png'
- import appAndroidImg from '../public/Android.png'
- import appIosImg from '../public/IOS.png'
+ import chromeImg from '../../public/sectionImages/chromFooter.png'
+ import safariImg from '../../public/sectionImages/safariFooter.png'
+ import appAndroidImg from '../../public/Android.png'
+ import appIosImg from '../../public/IOS.png'
 import React from "react";
 import {FaFacebookF} from "@react-icons/all-files/fa/FaFacebookF";
 import {FiInstagram} from "@react-icons/all-files/fi/FiInstagram";
