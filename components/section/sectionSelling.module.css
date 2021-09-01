@@ -1,5 +1,5 @@
 .sectionSell {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     max-width: 1380px !important;
     margin-top: 50px;
     padding: 0 !important;
@@ -43,7 +43,7 @@
 .singleSell {
     cursor: pointer;
     margin: 0 auto;
-    background-color: red;
+    background-color: white;
     border-radius: 16px;
     min-height: 321px;
     padding: 5px 52px 25px 52px;
