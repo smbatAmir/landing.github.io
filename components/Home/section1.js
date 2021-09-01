@@ -95,9 +95,7 @@ export default function Section1({homeData}) {
                     </div>
 
                     <div>
-                        {/*don't work________________________________________*/}
-                        {/*<p className={styles.textDescription} dangerouslySetInnerHTML={{__html: homeData.text}}/>*/}
-                        <p>{homeData.text}</p>
+                        <p className={styles.textDescription}>{htmlToReactParser.parse(homeData.text)}</p>
                     </div>
 
                     <div className={styles.joinButtonArea}>
