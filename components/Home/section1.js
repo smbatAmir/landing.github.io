@@ -16,7 +16,8 @@ export default function Section1({homeData}) {
 
     const videoPosition = {
         position: 'absolute',
-    }
+    };
+
     useEffect(() => {
         AOS.init({duration: 2000});
     }, [])
