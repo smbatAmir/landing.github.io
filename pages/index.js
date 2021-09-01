@@ -11,7 +11,6 @@ import Section5 from "../components/section/section5";
 export default function Home({homeData}) {
     const item = homeData;
     console.log("homeAllData______________________", homeData);
-
     return (
         <>
             <Section1 homeData={item[0]}/>
