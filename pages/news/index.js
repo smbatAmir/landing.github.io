@@ -6,6 +6,7 @@ import {Grid} from "@material-ui/core/index";
 import styles from "../../styles/News.module.css";
 import Link from "next/link";
 import AOS from "aos";
+import Image from "next/image";
 
 export default function News({allNews}) {
     useEffect(() => {
@@ -31,9 +32,11 @@ export default function News({allNews}) {
                                     <h1>{news.title ? news.title : "News Title Here"}</h1>
                                     <p className={styles.singleNewsData}>Posted on: <span>{news.createdAt}</span></p>
 
-                                    <img className={styles.singleBenefitsImages}
+                                    <Image className={styles.singleBenefitsImages}
                                          src={news.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}` : ""}
                                          alt=""
+                                         width={500}
+                                         height={500}
                                     />
                                     <p>{news.text}</p>
                                 </a>

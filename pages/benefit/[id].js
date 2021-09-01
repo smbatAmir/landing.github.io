@@ -6,6 +6,7 @@ import styles from "../../styles/News.module.css";
 import Link from "next/link";
 import React from "react";
 import {BsArrowLeft} from "@react-icons/all-files/bs/BsArrowLeft";
+import Image from "next/image";
 
 export default function BenefitsId({benefitItem}) {
     const item = benefitItem.banners[0];
@@ -28,9 +29,11 @@ export default function BenefitsId({benefitItem}) {
                     <Grid container>
                         <Grid column item lg={8} md={8} sm={12} xs={12} spacing={3}
                               className={styles.newsItemTItleAndData}>
-                            <img className={styles.singleBenefitsImages}
+                            <Image className={styles.singleBenefitsImages}
                                  src={item.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${item.thumbnailUrl}` : ""}
                                  alt=""
+                                 width={500}
+                                 height={500}
                             />
                             <h1 className={styles.newsitemsTitle}>{item.title}</h1>
                             <p>{item.text}</p>

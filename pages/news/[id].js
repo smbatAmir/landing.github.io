@@ -7,6 +7,7 @@ import styles from "../../styles/News.module.css";
 import Link from "next/link";
 import {BsArrowLeft} from "@react-icons/all-files/bs/BsArrowLeft";
 import AOS from "aos";
+import Image from "next/image";
 
 export default function NewsId({newsItem}) {
     const item = newsItem.banners[0];
@@ -26,9 +27,11 @@ export default function NewsId({newsItem}) {
                 </Grid>
 
                 <Grid column item lg={4} md={4} sm={12} xs={12} spacing={3} className={styles.newslistIImg}>
-                    <img className={styles.singleBenefitsImages}
+                    <Image className={styles.singleBenefitsImages}
                          src={item.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${item.thumbnailUrl}` : ""}
                          alt=""
+                           width={500}
+                           height={500}
                     />
                 </Grid>
 

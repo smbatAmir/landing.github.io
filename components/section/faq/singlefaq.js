@@ -73,7 +73,8 @@ export default function SingleFaq({id, title, text, thumbnailUrl}) {
             <AccordionDetails>
                 <Typography style={descText}>
                     {text ? text : "Faq text here, please edit and add text"}
-                    <img src={thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${thumbnailUrl}` : ""} alt=""/>
+                    <Image src={thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${thumbnailUrl}` : ""} alt="" width={500}
+                           height={500}/>
                     {/*<Image src={thumbnailUrl ? thumbnailUrl : ""} layout="fill"/>*/}
                 </Typography>
             </AccordionDetails>

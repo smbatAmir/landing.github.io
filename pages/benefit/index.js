@@ -4,6 +4,7 @@ import styles from '../../components/section/sectionFAQ.module.css'
 import Layout from "../../components/layout";
 import Sidebar from "../../components/sidebar";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Benefits({allBenefit}) {
     // console.log("allBenefit_______________", allBenefit)
@@ -22,7 +23,8 @@ export default function Benefits({allBenefit}) {
                         <div className={styles.singleBenefits}>
                             <Link href={`/benefit/${benefit._id}`} as={`/benefit/${benefit._id}`} key={benefit._id}>
                                 <a className={styles.cartHref}>
-                                    <img className={styles.singleBenefitsImages}
+                                    <Image className={styles.singleBenefitsImages} width={500}
+                                           height={500}
                                          src={benefit.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${benefit.thumbnailUrl}` : ""} alt=""/>
                                     <h4 className={styles.singleBenefitsTitle}>{benefit.title}</h4>
                                 </a>
