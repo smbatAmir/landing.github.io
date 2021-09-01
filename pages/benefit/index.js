@@ -18,8 +18,8 @@ export default function Benefits({allBenefit}) {
             </Grid>
 
             <Grid container>
-                {allBenefit.map((benefit) => (
-                    <Grid column item lg={3} md={3} sm={12} xs={12}>
+                {allBenefit.map((benefit,idx) => (
+                    <Grid column item lg={3} md={3} sm={12} xs={12} key={idx}>
                         <div className={styles.singleBenefits}>
                             <Link href={`/benefit/${benefit._id}`} as={`/benefit/${benefit._id}`} key={benefit._id}>
                                 <a className={styles.cartHref}>

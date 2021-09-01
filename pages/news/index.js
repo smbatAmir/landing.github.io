@@ -26,7 +26,7 @@ export default function News({allNews}) {
 
                 <Grid container lg={12} md={12} sm={12} xs={12} className={styles.newsContainer} spacing={3}>
                     {allNews?.map((news, idx) => (
-                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"}>
+                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"} key={idx}>
                             <Link href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
                                 <a>
                                     <h1>{news.title ? news.title : "News Title Here"}</h1>
