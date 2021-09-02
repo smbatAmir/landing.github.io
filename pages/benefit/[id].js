@@ -43,14 +43,6 @@ export default function BenefitsId({benefitItem}) {
                               className={styles.benefitsSingleItemTItleAndData}>
                             <h1 className={styles.benefitsSingleItemsTitle}>{item.title}</h1>
                             <p className={styles.benefitsSingleItemsText}>{htmlToReactParser.parse(item.text)}</p>
-                            <hr/>
-                            <p className={styles.benefitsSingleItemsText}>
-                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary
-                                to popular belief, Lorem Ipsum is not simply random text. Lorem Ipsum is not simply.
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet corporis excepturi labore nostrum placeat quia quos, suscipit
-                                vel! Adipisci amet esse illum officia quidem quis quos rem repudiandae sint tempore!</p>
                         </Grid>
                     </Grid>
                 </Grid>
