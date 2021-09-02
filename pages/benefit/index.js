@@ -49,16 +49,6 @@ Benefits.getLayout = function getLayout(page) {
     )
 }
 
-// export const getServerSideProps = async (context) => {
-//     const res = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Benefit");
-//     const benefitItem = await res.json();
-//
-//     return {
-//         props: {
-//             benefitItem,
-//         },
-//     };
-// };
 export async function getServerSideProps() {
     const allBenefit = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Benefit")
         .then(

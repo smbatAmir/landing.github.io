@@ -8,6 +8,9 @@ import Link from "next/link";
 import AOS from "aos";
 import Image from "next/image";
 
+const HtmlToReactParser = require('html-to-react').Parser;
+const htmlToReactParser = new HtmlToReactParser();
+
 export default function News({allNews}) {
     useEffect(() => {
         AOS.init({duration: 2000});
@@ -26,7 +29,7 @@ export default function News({allNews}) {
 
                 <Grid container lg={12} md={12} sm={12} xs={12} className={styles.newsContainer} spacing={3}>
                     {allNews?.map((news, idx) => (
-                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"} key={idx}
+                        <div data-aos={idx % 2 === 0 ? "fade-left" : "fade-right"} key={idx}
                              className={styles.newsContainerCard}>
                             <Link href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
                                 <a>
@@ -38,11 +41,13 @@ export default function News({allNews}) {
                                            alt=""
                                     />
                                     }
-                                    <h1 className={styles.newsContainerTitle}>{news.title ? news.title : "News Title Here"}</h1>
-                                    <p className={styles.singleNewsData}>Posted on: <span>{news.createdAt}</span></p>
-
-
-                                    <p>{news.text}</p>
+                                    <div className={styles.singleNewsText}>
+                                        <h3 className={styles.newsContainerTitle}>{news.title ? news.title : "News Title Here"}</h3>
+                                        <p className={styles.newsContainerText}>{htmlToReactParser.parse(news.text)}</p>
+                                        <span className={styles.newsContainerPostedOn}>
+                                            Posted on: <span>{news.createdAt}</span>
+                                        </span>
+                                    </div>
                                 </a>
                             </Link>
                         </div>

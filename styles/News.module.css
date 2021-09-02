@@ -6,7 +6,6 @@
 .newsContainerWraper > div {
     width: 1140px;
     margin: 0 auto;
-    border: 1px solid red
 }
 
 .textTitle {
@@ -21,140 +20,144 @@
 .newsContainer {
     /*margin: 0 auto !important;*/
 }
-.newsContainerTitle{
 
+.newsContainerTitle {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #272744;
+    margin: 0 0 15px;
 }
-.newsContainerCard{
+
+.newsContainerCard {
     background: #FFFFFF;
     box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
     border-radius: 32px;
     height: 330px;
     width: 100%;
-    border: 1px solid;
     padding: 45px;
     box-sizing: border-box;
     margin-bottom: 50px;
+    position: relative;
 }
 
-.singleNewsImages{
-    border-radius: 16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.singleBenefits {
-    background: #FFFFFF;
-    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.12);
-    border-radius: 24px;
-    padding: 15px;
-    display: inline-block;
-    /*position: relative;*/
-    /*top: -180px;*/
-    /*width: 230px;*/
-    margin-left: 33px;
-    margin-top: 33px;
-
-}
-
-
-.line {
-    width: 45%;
-    height: 2px;
-    background-color: #FF6600;
-}
-
-.cartHref {
+.newsContainerCard > a {
     text-decoration: none;
+    color: #272744;
+    display: flex;
+    align-items: start;
 }
 
-.singleBenefitsImages {
+.newsContainerCard > a > div {
+}
+
+.newsContainerCard > a > div:first-child {
+    width: 35%;
+}
+
+.singleNewsImages {
     border-radius: 16px;
+    object-fit: cover;
     width: 100%;
 }
 
-.singleNewsTitle {
-    font-size: 22px;
-    line-height: 28px;
-    color: #272744;
+.singleNewsText {
+    width: 65%;
+    display: inline-block;
+    background: none !important;
+    padding-left: 60px;
 }
 
-.singleNewsDescription {
+.newsContainerText > p > span,
+.newsContainerText {
+    font-weight: 600;
+    font-size: 18px !important;
+    line-height: 30px;
     color: #7C7C9E;
-    font-size: 18px;
 }
 
-.singleNewsData {
-    text-align: end;
+.newsContainerPostedOn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
     color: #AFAFC0;
-    font-size: 16px;
+    position: absolute;
+    right: 45px;
+    bottom: 45px;
 }
 
 
-
-.allNews {
-    border: 2px solid #FF6600;
-    color: #FF6600;
-    border-radius: 32px;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 13px 35px;
-
-}
-
-.singleNewsArea {
-    background-color: #fff;
-    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
-    border-radius: 32px;
-    margin-top: 50px !important;
-}
-
-.newslistIImg {
-    padding: 30px;
-
-}
-
-.newslisttext {
-    padding: 30px;
-
-}
-
-.newsitemsTitle {
-    font-size: 32px;
-    color: #272744;
-}
-
-.singleNewsItmeArea {
-    background-color: #fff;
-    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);
-    border-radius: 32px;
-    /*margin-top: 50px;*/
-}
-
-.BackItems {
-    color: #272744;
-    text-decoration: none;
-    font-size: 16px;
+/*.singleBenefits {*/
+/*    background: #FFFFFF;*/
+/*    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.12);*/
+/*    border-radius: 24px;*/
+/*    padding: 15px;*/
+/*    display: inline-block;*/
+/*    !*position: relative;*!*/
+/*    !*top: -180px;*!*/
+/*    !*width: 230px;*!*/
+/*    margin-left: 33px;*/
+/*    margin-top: 33px;*/
+/*}*/
+/*.singleBenefitsImages {*/
+/*    border-radius: 16px;*/
+/*    width: 100%;*/
+/*}*/
 
 
-}
+/*.allNews {*/
+/*    border: 2px solid #FF6600;*/
+/*    color: #FF6600;*/
+/*    border-radius: 32px;*/
+/*    text-decoration: none;*/
+/*    font-size: 16px;*/
+/*    padding: 13px 35px;*/
 
-.BackItemsArea {
-    padding-top: 30px;
-    padding-bottom: 30px;
+/*}*/
 
-}
+/*.singleNewsArea {*/
+/*    background-color: #fff;*/
+/*    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);*/
+/*    border-radius: 32px;*/
+/*    margin-top: 50px !important;*/
+/*}*/
 
-.newsItemTItleAndData {
-    padding: 0px 30px;
-}
+/*.newslistIImg {*/
+/*    padding: 30px;*/
+
+/*}*/
+
+/*.newslisttext {*/
+/*    padding: 30px;*/
+
+/*}*/
+
+/*.newsitemsTitle {*/
+/*    font-size: 32px;*/
+/*    color: #272744;*/
+/*}*/
+
+/*.singleNewsItmeArea {*/
+/*    background-color: #fff;*/
+/*    box-shadow: 8px 28px 74px rgba(184, 54, 0, 0.06);*/
+/*    border-radius: 32px;*/
+/*    !*margin-top: 50px;*!*/
+/*}*/
+
+/*.BackItems {*/
+/*    color: #272744;*/
+/*    text-decoration: none;*/
+/*    font-size: 16px;*/
+
+
+/*}*/
+
+/*.BackItemsArea {*/
+/*    padding-top: 30px;*/
+/*    padding-bottom: 30px;*/
+
+/*}*/
+
+/*.newsItemTItleAndData {*/
+/*    padding: 0px 30px;*/
+/*}*/
