@@ -30,6 +30,7 @@ export default function BenefitsId({benefitItem}) {
 
                 <Grid container lg={12} md={12} sm={12} xs={12} className={styles.benefitsSingleItmeArea} spacing={3}>
                     <Grid container>
+                        {item.thumbnailUrl &&
                         <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3}
                               className={styles.benefitsSingleItemTItleAndData}>
                             <Image className={styles.singleBenefitsImages}
@@ -39,11 +40,20 @@ export default function BenefitsId({benefitItem}) {
                                    height={500}
                             />
                         </Grid>
-                        <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3}
-                              className={styles.benefitsSingleItemTItleAndData}>
-                            <h1 className={styles.benefitsSingleItemsTitle}>{item.title}</h1>
-                            <p className={styles.benefitsSingleItemsText}>{htmlToReactParser.parse(item.text)}</p>
-                        </Grid>
+                        }
+                        {item.thumbnailUrl ?
+                            <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3}
+                                  className={styles.benefitsSingleItemTItleAndData}>
+                                <h1 className={styles.benefitsSingleItemsTitle}>{item.title}</h1>
+                                <p className={styles.benefitsSingleItemsText}>{htmlToReactParser.parse(item.text)}</p>
+                            </Grid>
+                            :
+                            <Grid column item lg={12} md={12} sm={12} xs={12} spacing={3}
+                                  className={styles.benefitsSingleItemTItleAndData}>
+                                <h1 className={styles.benefitsSingleItemsTitle}>{item.title}</h1>
+                                <p className={styles.benefitsSingleItemsText}>{htmlToReactParser.parse(item.text)}</p>
+                            </Grid>
+                        }
                     </Grid>
                 </Grid>
             </Container>
