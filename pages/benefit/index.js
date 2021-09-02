@@ -7,7 +7,7 @@ import Image from "next/image";
 import styles from '../../styles/Benefit.module.css';
 
 export default function Benefits({allBenefit}) {
-    // console.log("allBenefit_______________", allBenefit);
+    console.log("allBenefit_______________", allBenefit);
 
     return (
         <Container className={styles.benefitsContainer}>
@@ -26,7 +26,6 @@ export default function Benefits({allBenefit}) {
                                     <Image className={styles.singleBenefitsImages}
                                            width={290}
                                            height={290}
-                                        // layout="fill"
                                            src={`https://ura-cdn.nyc3.digitaloceanspaces.com/${benefit.thumbnailUrl}`}
                                            alt=""
                                     />
@@ -50,7 +49,17 @@ Benefits.getLayout = function getLayout(page) {
     )
 }
 
-export async function getStaticProps() {
+// export const getServerSideProps = async (context) => {
+//     const res = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Benefit");
+//     const benefitItem = await res.json();
+//
+//     return {
+//         props: {
+//             benefitItem,
+//         },
+//     };
+// };
+export async function getServerSideProps() {
     const allBenefit = await fetch("https://api-settings.uraaa.com/banners/all?settingName=Benefit")
         .then(
             (res) => res.json()

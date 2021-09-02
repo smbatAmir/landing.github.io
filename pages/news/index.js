@@ -16,8 +16,8 @@ export default function News({allNews}) {
     // console.log("allNews______________________", allNews);
 
     return (
-        <div style={{background: '#FFF6F0'}}>
-            <Container>
+        <div className={styles.newsContainerWraperBG}>
+            <Container className={styles.newsContainerWraper}>
                 <Grid container>
                     <Grid column item lg={6} md={6} sm={12} xs={12} spacing={3}>
                         <h4 className={styles.textTitle}>What’s new ?</h4>
@@ -26,18 +26,22 @@ export default function News({allNews}) {
 
                 <Grid container lg={12} md={12} sm={12} xs={12} className={styles.newsContainer} spacing={3}>
                     {allNews?.map((news, idx) => (
-                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"} key={idx}>
+                        <div data-aos={idx % 2 == 0 ? "fade-left" : "fade-right"} key={idx}
+                             className={styles.newsContainerCard}>
                             <Link href={`/news/${news._id}`} as={`/news/${news._id}`} key={news._id}>
                                 <a>
-                                    <h1>{news.title ? news.title : "News Title Here"}</h1>
+                                    {news.thumbnailUrl &&
+                                    <Image className={styles.singleNewsImages}
+                                           width={360}
+                                           height={230}
+                                           src={`https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}`}
+                                           alt=""
+                                    />
+                                    }
+                                    <h1 className={styles.newsContainerTitle}>{news.title ? news.title : "News Title Here"}</h1>
                                     <p className={styles.singleNewsData}>Posted on: <span>{news.createdAt}</span></p>
 
-                                    {/*<img className={styles.singleBenefitsImages}*/}
-                                    {/*     src={news.thumbnailUrl ? `https://ura-cdn.nyc3.digitaloceanspaces.com/${news.thumbnailUrl}` : ""}*/}
-                                    {/*     alt=""*/}
-                                    {/*     width={500}*/}
-                                    {/*     height={500}*/}
-                                    {/*/>*/}
+
                                     <p>{news.text}</p>
                                 </a>
                             </Link>
